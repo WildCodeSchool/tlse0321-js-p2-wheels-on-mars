@@ -1,4 +1,4 @@
-const Hero = () => {
+const HeroBanner = () => {
   <>
     <section className="hero-container">
       <h1>Rover Name</h1>
@@ -24,4 +24,4 @@ const Hero = () => {
   </>;
 };
 
-export default Hero;
+export default HeroBanner;

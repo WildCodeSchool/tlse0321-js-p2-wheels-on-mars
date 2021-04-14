@@ -4,13 +4,13 @@ import { useState } from 'react';
 const Pictures = () => {
   const [result, setResult] = useState([]);
   const fetchPictures = () => {
-    const url =
-      'https://mars-photos.herokuapp.com/api/v1/rovers/Perseverance/latest_photos?';
     axios
-      .get(url)
+      .get(
+        'https://mars-photos.herokuapp.com/api/v1/rovers/Perseverance/latest_photos?',
+      )
       .then((response) => response.data)
       .then((data) => {
-        console.log(data.latest_photos);
+        // console.log(data.latest_photos);
         setResult(data.latest_photos);
       });
     //       const roverHtml = `
@@ -22,7 +22,7 @@ const Pictures = () => {
   fetchPictures();
   return (
     <>
-      <h1>{result}</h1>
+      <h1>{result[0]}</h1>
     </>
   );
 };

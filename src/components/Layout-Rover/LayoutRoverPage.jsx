@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import HeroBanner from './HeroBanner';
 import Description from './Description';
 import PictureSlider from './PictureSlider';
+import PicturesGallery from './PicturesGallery';
 
 const LayoutRoverPage = () => (
   <div className="rover-page-">
@@ -10,7 +11,7 @@ const LayoutRoverPage = () => (
     <HeroBanner />
     <Description />
     <PictureSlider />
-    {/* <PicturesGallery /> */}
+    <PicturesGallery />
     <Footer />
   </div>
 );

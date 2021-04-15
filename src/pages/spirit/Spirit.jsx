@@ -1,7 +1,14 @@
-const Spirit = () => (
-  <div>
-    <h2>Spirit</h2>
-  </div>
-);
+import LayoutRoverPage from '../../components/Layout-Rover/LayoutRoverPage';
+
+const Spirit = () => {
+  const rover = {
+    name: 'Spirit',
+  };
+  return (
+    <div>
+      <LayoutRoverPage {...rover} />
+    </div>
+  );
+};
 
 export default Spirit;

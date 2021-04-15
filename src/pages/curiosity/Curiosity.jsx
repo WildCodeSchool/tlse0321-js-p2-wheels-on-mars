@@ -1,7 +1,14 @@
-const Curiosity = () => (
-  <div>
-    <h2>Curiosity</h2>
-  </div>
-);
+import LayoutRoverPage from '../../components/Layout-Rover/LayoutRoverPage';
+
+const Curiosity = () => {
+  const rover = {
+    name: 'Curiosity',
+  };
+  return (
+    <div>
+      <LayoutRoverPage {...rover} />
+    </div>
+  );
+};
 
 export default Curiosity;

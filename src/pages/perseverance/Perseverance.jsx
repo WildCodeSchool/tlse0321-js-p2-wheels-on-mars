@@ -2,7 +2,7 @@ import LayoutRoverPage from '../../components/Layout-Rover/LayoutRoverPage';
 
 const Perseverance = () => {
   const rover = {
-    name: 'Spirit',
+    name: 'Perseverance',
   };
   return (
     <div>

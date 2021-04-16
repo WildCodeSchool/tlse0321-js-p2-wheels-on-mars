@@ -1,4 +1,4 @@
-import LayoutRoverPage from '../../components/Layout-Rover/LayoutRoverPage';
+import LayoutRoverPage from '../../components/LayoutRover/LayoutRoverPage';
 
 const Opportunity = () => {
   const rover = {

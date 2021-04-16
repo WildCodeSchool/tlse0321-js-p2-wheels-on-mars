@@ -2,15 +2,15 @@
 import HeroBanner from './HeroBanner';
 // import Description from './Description';
 // import PictureSlider from './PictureSlider';
-// import PicturesGallery from './PicturesGallery';
+import Pictures from '../Pictures/Pictures';
 
 const LayoutRoverPage = ({ name }) => (
   <div className="rover-page-container">
     <HeroBanner name={name} />
     {/* <Description />
-    <PictureSlider />
-    <PicturesGallery />
-    <Footer />  */}
+    <PictureSlider /> */}
+    <Pictures name={name} />
+    {/* <Footer />  */}
   </div>
 );
 

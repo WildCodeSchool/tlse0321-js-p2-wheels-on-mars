@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // ce composant est censee recup les donnes des photo des rover
 const Pictures = ({ name }) => {
   const [result, setResult] = useState([]);
-  const fetchPictures = () => {
+  useEffect(() => {
     axios
       .get(
         `https://mars-photos.herokuapp.com/api/v1/rovers/${name}/latest_photos`,
@@ -13,8 +13,7 @@ const Pictures = ({ name }) => {
       .then((data) => {
         setResult(data.latest_photos);
       });
-  };
-  fetchPictures();
+  }, []);
   return (
     <>
       {result.map((photo) => (

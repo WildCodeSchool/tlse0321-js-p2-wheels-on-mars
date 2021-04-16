@@ -7,19 +7,19 @@ const Navigation = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/Sojourner">Sojourner</Link>
+        <Link to="/sojourner">Sojourner</Link>
       </li>
       <li>
-        <Link to="/Spirit">Spirit</Link>
+        <Link to="/spirit">Spirit</Link>
       </li>
       <li>
-        <Link to="/Opportunity">Opportunity</Link>
+        <Link to="/opportunity">Opportunity</Link>
       </li>
       <li>
-        <Link to="/Curiosity">Curiosity</Link>
+        <Link to="/curiosity">Curiosity</Link>
       </li>
       <li>
-        <Link to="/Perseverance">Perseverance</Link>
+        <Link to="/perseverance">Perseverance</Link>
       </li>
     </ul>
   </nav>

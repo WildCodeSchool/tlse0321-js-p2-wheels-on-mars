@@ -17,11 +17,11 @@ const App = () => (
         <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Sojourner" exact component={Sojourner} />
-          <Route path="/Spirit" exact component={Spirit} />
-          <Route path="/Opportunity" exact component={Opportunity} />
-          <Route path="/Curiosity" exact component={Curiosity} />
-          <Route path="/Perseverance" exact component={Perseverance} />
+          <Route path="/sojourner" exact component={Sojourner} />
+          <Route path="/spirit" exact component={Spirit} />
+          <Route path="/opportunity" exact component={Opportunity} />
+          <Route path="/curiosity" exact component={Curiosity} />
+          <Route path="/perseverance" exact component={Perseverance} />
           <Route component={NotFound} />
         </Switch>
       </div>

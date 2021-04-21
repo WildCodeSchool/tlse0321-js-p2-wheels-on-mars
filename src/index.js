@@ -1,30 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-const themeDark = createMuiTheme({
-  palette: {
-    background: {
-      default: '#222222',
-    },
-    text: {
-      primary: '#ffffff',
-    },
-  },
-});
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <MuiThemeProvider theme={themeDark}>
-        <CssBaseline />
-        <App />
-      </MuiThemeProvider>
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

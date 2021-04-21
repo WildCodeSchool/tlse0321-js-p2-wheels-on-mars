@@ -4,31 +4,32 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-
+import { Box } from '@material-ui/core';
 import Pictures from '../Pictures/Pictures';
 import HeroBanner from './HeroBanner';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    flexGrow: 1,
+    backgroundColor: '#151515',
   },
   paper: {
-    padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+  },
+  alignement: {
+    textAlign: 'center',
   },
 }));
 
-const LayoutRoverPage = ({ name }) => {
+const LayoutRoverPage = ({ name, iframe }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <HeroBanner name={name} />
-          </Paper>
+          <Box className={classes.alignement}>
+            <HeroBanner name={name} iframe={iframe} />
+          </Box>
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>Description</Paper>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-const HeroBanner = ({ name }) => {
+const HeroBanner = ({ name, iframe }) => {
   const [infosRover, setInfosRover] = useState([]);
   useEffect(() => {
     axios
@@ -15,31 +15,38 @@ const HeroBanner = ({ name }) => {
   }, []);
   return (
     <>
-      <section style={{ width: '100%' }}>
-        <h1>{name}</h1>
-        <iframe
-          src="https://mars.nasa.gov/layout/embed/model/?s=3&rotate=true"
-          title="rover"
-          height="450"
-          width="100%"
-          scrolling="no"
-          frameBorder="0"
-          allowFullScreen
-        />
+      <section style={{ width: '100%', color: '#FFF' }}>
         <Typography component="div">
+          <Box letterSpacing={1} m={1}>
+            <h1>{name}</h1>
+          </Box>
+          <iframe
+            src={iframe}
+            title="rover"
+            height="500"
+            width="100%"
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen
+          />
+
           <Box
             display="flex"
             p={2}
-            m={5}
-            justifyContent="space-between"
+            m={2}
+            justifyContent="center"
+            alignItems="center"
             flexWrap="wrap"
           >
             <Box
               p={2}
               m={2}
-              bgcolor="grey.300"
+              color="#FFF"
+              bgcolor="#242424"
               borderRadius="10px"
-              width="120px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
             >
               <Box fontWeight="fontWeightBold">Status: </Box>
               {infosRover.status}
@@ -47,9 +54,12 @@ const HeroBanner = ({ name }) => {
             <Box
               p={2}
               m={2}
-              bgcolor="grey.300"
+              color="#FFF"
+              bgcolor="#242424"
               borderRadius="10px"
-              width="120px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
             >
               <Box fontWeight="fontWeightBold">Launch date: </Box>
               {infosRover.launch_date}
@@ -57,9 +67,12 @@ const HeroBanner = ({ name }) => {
             <Box
               p={2}
               m={2}
-              bgcolor="grey.300"
+              color="#FFF"
+              bgcolor="#242424"
               borderRadius="10px"
-              width="120px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
             >
               <Box fontWeight="fontWeightBold">Landind date: </Box>
               {infosRover.landing_date}
@@ -67,19 +80,25 @@ const HeroBanner = ({ name }) => {
             <Box
               p={2}
               m={2}
-              bgcolor="grey.300"
+              color="#FFF"
+              bgcolor="#242424"
               borderRadius="10px"
-              width="120px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
             >
               <Box fontWeight="fontWeightBold">Time on mars: </Box>
-              {infosRover.max_sol} days
+              {infosRover.max_sol} sols
             </Box>
             <Box
               p={2}
               m={2}
-              bgcolor="grey.300"
+              color="#FFF"
+              bgcolor="#242424"
               borderRadius="10px"
-              width="120px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
             >
               <Box fontWeight="fontWeightBold">Pictures took: </Box>
               {infosRover.total_photos}

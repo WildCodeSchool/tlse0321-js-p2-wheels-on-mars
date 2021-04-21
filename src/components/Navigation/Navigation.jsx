@@ -36,98 +36,89 @@ const Navigation = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
-      <AppBar color="primary" style={{ background: 'transparent' }}>
+      <AppBar color="primary">
         <Toolbar>
-          <Link to="/">
-            <Typography>
-              <IconContext.Provider
-                value={{
-                  size: '4rem',
-                  color: '#941b0c',
-                  className: 'logo-planet',
-                }}
-              >
-                <GiPlanetConquest />
-              </IconContext.Provider>
-            </Typography>
-          </Link>
+          <Typography component={Link} to="/">
+            <IconContext.Provider
+              value={{
+                size: '4rem',
+                color: '#941b0c',
+                className: 'logo-planet',
+              }}
+            >
+              <GiPlanetConquest />
+            </IconContext.Provider>
+          </Typography>
 
           {isMatch ? (
             <DrawerMenu />
           ) : (
             <Tabs onChange={handleClickTab} value={value}>
-              <Link to="/curiosity">
-                <Tab
-                  icon={(
-                    <IconContext.Provider
-                      value={{
-                        size: '1.5rem',
-                        className: 'tab-icons',
-                      }}
-                    >
-                      <FaRobot />
-                    </IconContext.Provider>
-                  )}
-                  label="Curiosity"
-                />
-              </Link>
-              <Link to="/opportunity">
-                <Tab
-                  icon={(
-                    <IconContext.Provider
-                      value={{
-                        size: '1.5rem',
-                        className: 'tab-icons',
-                      }}
-                    >
-                      <FaRobot />
-                    </IconContext.Provider>
-                  )}
-                  label="Opportunity"
-                />
-              </Link>
-              <Link to="/perseverance">
-                <Tab
-                  icon={(
-                    <IconContext.Provider
-                      value={{
-                        size: '1.5rem',
-                        className: 'tab-icons',
-                      }}
-                    >
-                      <FaRobot />
-                    </IconContext.Provider>
-                  )}
-                  label="Perseverance"
-                />
-              </Link>
-              <Link to="/spirit">
-                <Tab
-                  icon={(
-                    <IconContext.Provider
-                      value={{
-                        size: '1.5rem',
-                        className: 'tab-icons',
-                      }}
-                    >
-                      <FaRobot />
-                    </IconContext.Provider>
-                  )}
-                  label="Spirit"
-                />
-              </Link>
+              <Tab
+                component={Link}
+                to="/curiosity"
+                icon={(
+                  <IconContext.Provider
+                    value={{
+                      size: '1.5rem',
+                      className: 'tab-icons',
+                    }}
+                  >
+                    <FaRobot />
+                  </IconContext.Provider>
+                )}
+                label="Curiosity"
+              />
+
+              <Tab
+                component={Link}
+                to="/opportunity"
+                icon={(
+                  <IconContext.Provider
+                    value={{
+                      size: '1.5rem',
+                      className: 'tab-icons',
+                    }}
+                  >
+                    <FaRobot />
+                  </IconContext.Provider>
+                )}
+                label="Opportunity"
+              />
+
+              <Tab
+                component={Link}
+                to="/perseverance"
+                icon={(
+                  <IconContext.Provider
+                    value={{
+                      size: '1.5rem',
+                      className: 'tab-icons',
+                    }}
+                  >
+                    <FaRobot />
+                  </IconContext.Provider>
+                )}
+                label="Perseverance"
+              />
+
+              <Tab
+                component={Link}
+                to="/spirit"
+                icon={(
+                  <IconContext.Provider
+                    value={{
+                      size: '1.5rem',
+                      className: 'tab-icons',
+                    }}
+                  >
+                    <FaRobot />
+                  </IconContext.Provider>
+                )}
+                label="Spirit"
+              />
             </Tabs>
           )}
-
-          {/* <Button
-            area-controls="menu"
-            onClick={handleOpenMenu}
-            variant="contained"
-            color="secondary"
-            size="large"
-          >
-            Explore
-          </Button> */}
         </Toolbar>
       </AppBar>
     </>
@@ -135,7 +126,16 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
+// Button menu feature pending
+/* <Button
+            area-controls="menu"
+            onClick={handleOpenMenu}
+            variant="contained"
+            color="secondary"
+            size="large"
+          >
+            Explore
+          </Button> */
 /* <Menu
   style={{ marginTop: "3rem" }}
   id="menu"

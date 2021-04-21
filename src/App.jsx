@@ -1,4 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core';
+import Theme from './components/Navigation/components/Utils/Theme';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/home/Home';
 import Sojourner from './pages/sojourner/Sojourner';
@@ -12,7 +14,9 @@ import Pictures from './components/Pictures/Pictures';
 const App = () => (
   <>
     <Pictures />
-    <Navigation />
+    <ThemeProvider theme={Theme}>
+      <Navigation />
+    </ThemeProvider>
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/sojourner" exact component={Sojourner} />

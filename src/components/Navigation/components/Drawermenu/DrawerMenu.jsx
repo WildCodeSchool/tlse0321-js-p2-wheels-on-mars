@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {
   Drawer,
@@ -39,7 +40,10 @@ const DrawerMenu = () => {
         onClose={() => setOpenDrawer(!openDrawer)}
         open={openDrawer}
       >
-        <Typography className={classes.headListItem}>
+        <Typography
+          className={classes.headListItem}
+          onClick={() => setOpenDrawer(!openDrawer)}
+        >
           <IconContext.Provider
             value={{
               size: '2rem',
@@ -52,25 +56,49 @@ const DrawerMenu = () => {
         </Typography>
 
         <List className={classes.fullList}>
-          <ListItem divider button className={classes.listItem}>
+          <ListItem
+            component={Link}
+            to="/curiosity"
+            divider
+            button
+            className={classes.listItem}
+          >
             <ListItemIcon>
               <ListItemText>Curiosity</ListItemText>
             </ListItemIcon>
           </ListItem>
 
-          <ListItem divider button className={classes.listItem}>
+          <ListItem
+            component={Link}
+            to="/opportunity"
+            divider
+            button
+            className={classes.listItem}
+          >
             <ListItemIcon>
               <ListItemText>Opportunity</ListItemText>
             </ListItemIcon>
           </ListItem>
 
-          <ListItem divider button className={classes.listItem}>
+          <ListItem
+            component={Link}
+            to="/perseverance"
+            divider
+            button
+            className={classes.listItem}
+          >
             <ListItemIcon>
               <ListItemText>Perseverance</ListItemText>
             </ListItemIcon>
           </ListItem>
 
-          <ListItem divider button className={classes.listItem}>
+          <ListItem
+            component={Link}
+            to="/spirit"
+            divider
+            button
+            className={classes.listItem}
+          >
             <ListItemIcon>
               <ListItemText>Spirit</ListItemText>
             </ListItemIcon>

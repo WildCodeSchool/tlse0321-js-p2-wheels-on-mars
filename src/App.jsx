@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/home/Home';
 import Sojourner from './pages/sojourner/Sojourner';
@@ -12,20 +12,16 @@ import Pictures from './components/Pictures/Pictures';
 const App = () => (
   <>
     <Pictures />
-    <Router>
-      <div>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/sojourner" exact component={Sojourner} />
-          <Route path="/spirit" exact component={Spirit} />
-          <Route path="/opportunity" exact component={Opportunity} />
-          <Route path="/curiosity" exact component={Curiosity} />
-          <Route path="/perseverance" exact component={Perseverance} />
-          <Route component={NotFound} />
-        </Switch>
-      </div>
-    </Router>
+    <Navigation />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/sojourner" exact component={Sojourner} />
+      <Route path="/spirit" exact component={Spirit} />
+      <Route path="/opportunity" exact component={Opportunity} />
+      <Route path="/curiosity" exact component={Curiosity} />
+      <Route path="/perseverance" exact component={Perseverance} />
+      <Route component={NotFound} />
+    </Switch>
   </>
 );
 export default App;

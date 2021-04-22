@@ -10,9 +10,6 @@ import {
   Tabs,
   Tab,
   Toolbar,
-  // Button,
-  // Menu,
-  // MenuItem,
   useMediaQuery,
   useTheme,
 } from '@material-ui/core';
@@ -20,18 +17,10 @@ import DrawerMenu from './components/Drawermenu/DrawerMenu';
 
 const Navigation = () => {
   const [value, setValue] = useState(0);
-  // const [anchorEl, setAnchorEl] = useState(false);
 
   const handleClickTab = (e, newValue) => {
     setValue(newValue);
   };
-  // const handleOpenMenu = (e) => {
-  //   setAnchorEl(e.currentTarget);
-  // };
-  // const handleCloseMenu = (e) => {
-  //   setAnchorEl(false);
-  // };
-  // Breakpoints
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
   return (
@@ -126,82 +115,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-// Button menu feature pending
-/* <Button
-            area-controls="menu"
-            onClick={handleOpenMenu}
-            variant="contained"
-            color="secondary"
-            size="large"
-          >
-            Explore
-          </Button> */
-/* <Menu
-  style={{ marginTop: "3rem" }}
-  id="menu"
-  anchorEl={anchorEl}
-  onClose={handleCloseMenu}
-  open={Boolean(anchorEl)}
->
-  <MenuItem onClick={handleCloseMenu}>
-    <Tab
-      icon={
-        <IconContext.Provider
-          value={{
-            size: "1.5rem",
-            className: "tab-icons"
-          }}
-        >
-          <FaRobot />
-        </IconContext.Provider>
-      }
-      label="Curiosity"
-    />
-  </MenuItem>
-  <MenuItem onClick={handleCloseMenu}>
-    <Tab
-      icon={
-        <IconContext.Provider
-          value={{
-            size: "1.5rem",
-            className: "tab-icons"
-          }}
-        >
-          <FaRobot />
-        </IconContext.Provider>
-      }
-      label="Opportunity"
-    />
-  </MenuItem>
-  <MenuItem onClick={handleCloseMenu}>
-    <Tab
-      icon={
-        <IconContext.Provider
-          value={{
-            size: "1.5rem",
-            className: "tab-icons"
-          }}
-        >
-          <FaRobot />
-        </IconContext.Provider>
-      }
-      label="Perseverance"
-    />
-  </MenuItem>
-  <MenuItem onClick={handleCloseMenu}>
-    {" "}
-    <Tab
-      icon={
-        <IconContext.Provider
-          value={{
-            size: "1.5rem",
-            className: "tab-icons"
-          }}
-        >
-          <FaRobot />
-        </IconContext.Provider>
-      }
-      label="Spirit"
-    />
-  </MenuItem>
-    </Menu> */

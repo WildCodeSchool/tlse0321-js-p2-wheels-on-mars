@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
   },
   divider: {
-    height: '100%',
+    height: 'auto',
     margin: 4,
     background: 'black',
   },
@@ -96,7 +96,7 @@ const Footer = () => {
                 to="/"
                 button
                 className={classes.listItem}
-                style={{ marginBottom: 5 }}
+                style={{ marginTop: 30 }}
               >
                 <ListItemText>Home</ListItemText>
               </ListItem>
@@ -136,7 +136,11 @@ const Footer = () => {
                 <ListItemText>Spirit</ListItemText>
               </ListItem>
 
-              <ListItem button className={classes.listItem}>
+              <ListItem
+                button
+                className={classes.listItem}
+                style={{ marginBottom: 30 }}
+              >
                 <ListItemText>The Team</ListItemText>
               </ListItem>
               <Box className={classes.footerCopyright}>

@@ -9,7 +9,6 @@ import SendIcon from '@material-ui/icons/Send';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import { Avatar } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     width: '100%',
+    marginBottom: theme.spacing(5),
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -46,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'center',
+    flexWrap: 'nowrap',
+    whiteSpace: 'nowrap',
   },
   box: {
     display: 'flex',
@@ -57,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
   },
   contact: {
     padding: 30,
-    float: 'right',
   },
   lastSection: {
     alignItems: 'start',
@@ -69,11 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   footerCopyright: {
     display: 'flex',
-    justifyContent: 'space-between',
-    aligntItems: 'center',
-    flexWrap: 'nowrap',
-    whiteSpace: 'nowrap',
+    justifyContent: 'center',
     textAlign: 'center',
+    flexWrap: 'nowrap',
   },
 }));
 
@@ -81,7 +80,7 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" style={{ backgroundColor: '#13103B' }}>
         <Toolbar className={classes.toolBar}>
           <Box>
             <Divider
@@ -97,21 +96,17 @@ const Footer = () => {
                 to="/"
                 button
                 className={classes.listItem}
+                style={{ marginBottom: 5 }}
               >
-                <ListItemIcon>
-                  <ListItemText>Home</ListItemText>
-                </ListItemIcon>
+                <ListItemText>Home</ListItemText>
               </ListItem>
-
               <ListItem
                 component={Link}
                 to="/perseverance"
                 button
                 className={classes.listItem}
               >
-                <ListItemIcon>
-                  <ListItemText>Perseverance</ListItemText>
-                </ListItemIcon>
+                <ListItemText>Perseverance</ListItemText>
               </ListItem>
 
               <ListItem
@@ -120,9 +115,7 @@ const Footer = () => {
                 button
                 className={classes.listItem}
               >
-                <ListItemIcon>
-                  <ListItemText>Curiosity</ListItemText>
-                </ListItemIcon>
+                <ListItemText>Curiosity</ListItemText>
               </ListItem>
 
               <ListItem
@@ -131,9 +124,7 @@ const Footer = () => {
                 button
                 className={classes.listItem}
               >
-                <ListItemIcon>
-                  <ListItemText>Opportunity</ListItemText>
-                </ListItemIcon>
+                <ListItemText>Opportunity</ListItemText>
               </ListItem>
 
               <ListItem
@@ -142,20 +133,19 @@ const Footer = () => {
                 button
                 className={classes.listItem}
               >
-                <ListItemIcon>
-                  <ListItemText>Spirit</ListItemText>
-                </ListItemIcon>
+                <ListItemText>Spirit</ListItemText>
               </ListItem>
 
               <ListItem button className={classes.listItem}>
-                <ListItemIcon>
-                  <ListItemText>The Team</ListItemText>
-                </ListItemIcon>
+                <ListItemText>The Team</ListItemText>
               </ListItem>
               <Box className={classes.footerCopyright}>
-                <Typography variant="body2" color="inherit">
-                  ©2010-2020 Privacy-Terms
-                </Typography>
+                <ListItem className={classes.listItem}>
+                  <ListItemText>©2010-2020</ListItemText>
+                </ListItem>
+                <ListItem button className={classes.listItem}>
+                  <ListItemText>Privacy-Terms</ListItemText>
+                </ListItem>
               </Box>
             </List>
           </Box>
@@ -166,7 +156,7 @@ const Footer = () => {
               orientation="vertical"
             />
           </Box>
-          <Box className="secondCol">
+          <Box className={classes.secondCol}>
             <Box className={classes.contact}>
               <Typography variant="subtitle1" gutterBottom>
                 Contact Nasa:

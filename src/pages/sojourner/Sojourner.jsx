@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: '#151515',
+    backgroundColor: '#13103B',
   },
   paper: {
     textAlign: 'center',
@@ -24,18 +24,21 @@ const Sojourner = () => {
         <Grid item xs={12}>
           <Box className={classes.alignement}>
             <section style={{ width: '100%', color: '#FFF' }}>
-              <Box letterSpacing={1} m={1}>
+              <Box letterSpacing={1} fontSize="1.8rem">
                 <h1>Sojourner</h1>
               </Box>
-              <iframe
-                src="https://static.turbosquid.com/Preview/000226/660/6D/sojourner-rover-3d-model_Z.jpg"
-                title="rover"
-                height="500"
-                width="100%"
-                scrolling="no"
-                frameBorder="0"
-                allowFullScreen
-              />
+              <div
+                style={{
+                  width: '100%',
+                  textAlign: 'center',
+                }}
+              >
+                <img
+                  src="https://static.turbosquid.com/Preview/000226/660/6D/sojourner-rover-3d-model_Z.jpg"
+                  alt="Sojourner rover"
+                  height="500px"
+                />
+              </div>
               <Typography component="div">
                 <Box
                   display="flex"
@@ -49,7 +52,8 @@ const Sojourner = () => {
                     p={2}
                     m={2}
                     color="#FFF"
-                    bgcolor="#242424"
+                    bgcolor="#19103B"
+                    border="1px solid #BBB"
                     borderRadius="10px"
                     height="50px"
                     width="150px"
@@ -62,7 +66,8 @@ const Sojourner = () => {
                     p={2}
                     m={2}
                     color="#FFF"
-                    bgcolor="#242424"
+                    bgcolor="#19103B"
+                    border="1px solid #BBB"
                     borderRadius="10px"
                     height="50px"
                     width="150px"
@@ -75,7 +80,8 @@ const Sojourner = () => {
                     p={2}
                     m={2}
                     color="#FFF"
-                    bgcolor="#242424"
+                    bgcolor="#19103B"
+                    border="1px solid #BBB"
                     borderRadius="10px"
                     height="50px"
                     width="150px"
@@ -88,7 +94,8 @@ const Sojourner = () => {
                     p={2}
                     m={2}
                     color="#FFF"
-                    bgcolor="#242424"
+                    bgcolor="#19103B"
+                    border="1px solid #BBB"
                     borderRadius="10px"
                     height="50px"
                     width="150px"
@@ -101,7 +108,8 @@ const Sojourner = () => {
                     p={2}
                     m={2}
                     color="#FFF"
-                    bgcolor="#242424"
+                    bgcolor="#19103B"
+                    border="1px solid #BBB"
                     borderRadius="10px"
                     height="50px"
                     width="150px"

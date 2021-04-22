@@ -1,4 +1,3 @@
-// import Footer from '../Footer/Footer';
 // import Description from './Description';
 // import PictureSlider from './PictureSlider';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,7 +9,7 @@ import HeroBanner from './HeroBanner';
 
 const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor: '#151515',
+    backgroundColor: '#13103B',
   },
   paper: {
     textAlign: 'center',

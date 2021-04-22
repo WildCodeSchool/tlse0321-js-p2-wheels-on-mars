@@ -17,7 +17,7 @@ const HeroBanner = ({ name, iframe }) => {
     <>
       <section style={{ width: '100%', color: '#FFF' }}>
         <Typography component="div">
-          <Box letterSpacing={1} m={1}>
+          <Box letterSpacing={1} fontSize="1.8rem">
             <h1>{name}</h1>
           </Box>
           <iframe
@@ -32,7 +32,6 @@ const HeroBanner = ({ name, iframe }) => {
 
           <Box
             display="flex"
-            p={2}
             m={2}
             justifyContent="center"
             alignItems="center"
@@ -42,7 +41,8 @@ const HeroBanner = ({ name, iframe }) => {
               p={2}
               m={2}
               color="#FFF"
-              bgcolor="#242424"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
               borderRadius="10px"
               height="50px"
               width="150px"
@@ -55,7 +55,8 @@ const HeroBanner = ({ name, iframe }) => {
               p={2}
               m={2}
               color="#FFF"
-              bgcolor="#242424"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
               borderRadius="10px"
               height="50px"
               width="150px"
@@ -68,7 +69,8 @@ const HeroBanner = ({ name, iframe }) => {
               p={2}
               m={2}
               color="#FFF"
-              bgcolor="#242424"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
               borderRadius="10px"
               height="50px"
               width="150px"
@@ -81,7 +83,8 @@ const HeroBanner = ({ name, iframe }) => {
               p={2}
               m={2}
               color="#FFF"
-              bgcolor="#242424"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
               borderRadius="10px"
               height="50px"
               width="150px"
@@ -94,7 +97,8 @@ const HeroBanner = ({ name, iframe }) => {
               p={2}
               m={2}
               color="#FFF"
-              bgcolor="#242424"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
               borderRadius="10px"
               height="50px"
               width="150px"

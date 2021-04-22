@@ -185,8 +185,6 @@ const Footer = () => {
                   <SendIcon />
                 </IconButton>
               </Paper>
-            </Box>
-            <Box className={classes.lastSection}>
               <Typography variant="subtitle1" gutterBottom>
                 Follow us:
               </Typography>

@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   },
 });
 
-const LayoutMissions = () => {
+const Missions = () => {
   const classes = useStyles();
   return (
     <>
@@ -128,4 +128,4 @@ const LayoutMissions = () => {
     </>
   );
 };
-export default LayoutMissions;
+export default Missions;

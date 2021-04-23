@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router, Route, Switch, Link,
 } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import LayoutMissions from './components/Missions';
+import Missions from './components/Missions';
 import Science from './components/Science';
 import Instruments from './components/Instruments';
 
@@ -30,17 +30,17 @@ const Descriptions = () => {
               <Link to="/">Mission</Link>
             </li>
             <li>
-              <Link to="/roverName/science">Science</Link>
+              <Link to="/science">Science</Link>
             </li>
             <li>
-              <Link to="/roverName/Tech">Instruments</Link>
+              <Link to="/instruments">Instruments</Link>
             </li>
           </ul>
         </nav>
         <Switch>
-          <Route exact path="/" component={LayoutMissions} />
-          <Route path="/roverName/science" component={Science} />
-          <Route path="/roverName/tech" component={Instruments} />
+          <Route exact path="/" component={Missions} />
+          <Route path="/science" component={Science} />
+          <Route path="/instruments" component={Instruments} />
         </Switch>
       </Router>
     </>

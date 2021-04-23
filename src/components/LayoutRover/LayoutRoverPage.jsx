@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { Box } from '@material-ui/core';
 import Pictures from '../Pictures/Pictures';
 import HeroBanner from './HeroBanner';
+import RoadMap from '../RoadMap/RoadMap';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -32,7 +33,7 @@ const LayoutRoverPage = ({ name, iframe }) => {
           <Paper className={classes.paper}>Description</Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>PictureSlider</Paper>
+          <RoadMap />
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper}>

@@ -31,7 +31,7 @@ const Navigation = () => {
             <IconContext.Provider
               value={{
                 size: '4rem',
-                color: '#941b0c',
+                color: '#13103C',
                 className: 'logo-planet',
               }}
             >

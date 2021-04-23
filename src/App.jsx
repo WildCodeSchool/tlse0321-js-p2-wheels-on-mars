@@ -9,7 +9,7 @@ import Opportunity from './pages/opportunity/Opportunity';
 import Curiosity from './pages/curiosity/Curiosity';
 import Perseverance from './pages/perseverance/Perseverance';
 import NotFound from './pages/notFound/NotFound';
-import Pictures from './components/Pictures/Pictures';
+import Footer from './components/Footer/Footer';
 
 const App = () => (
   <>
@@ -26,6 +26,7 @@ const App = () => (
       <Route path="/perseverance" exact component={Perseverance} />
       <Route component={NotFound} />
     </Switch>
+    <Footer />
   </>
 );
 export default App;

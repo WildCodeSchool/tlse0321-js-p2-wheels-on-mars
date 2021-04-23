@@ -1,39 +1,114 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
-const HeroBanner = ({ name }) => {
+const HeroBanner = ({ name, iframe }) => {
   const [infosRover, setInfosRover] = useState([]);
   useEffect(() => {
     axios
       .get(`https://mars-photos.herokuapp.com/api/v1/manifests/${name}`)
       .then((response) => response.data)
       .then((data) => {
-        // console.log(data.photo_manifest);
         setInfosRover(data.photo_manifest);
       });
   }, []);
   return (
     <>
-      <section className="hero-container">
-        <h1>{name}</h1>
-        <iframe
-          src="https://mars.nasa.gov/layout/embed/model/?s=3&rotate=true"
-          title="rover"
-          width="800"
-          height="450"
-          scrolling="no"
-          frameBorder="0"
-          allowFullScreen
-        />
-        <div id="status-info">
-          <ul>
-            <li>Status :{infosRover.status}</li>
-            <li>Launch date :{infosRover.launch_date}</li>
-            <li>Landind date:{infosRover.landing_date}</li>
-            <li>Time on mars:{infosRover.max_sol}</li>
-            <li>Pictures took:{infosRover.total_photos}</li>
-          </ul>
-        </div>
+      <section style={{ width: '100%', color: '#FFF' }}>
+        <Typography component="div">
+          <Box letterSpacing={1} fontSize="1.8rem">
+            <h1>{name}</h1>
+          </Box>
+          <iframe
+            src={iframe}
+            title="rover"
+            height="500"
+            width="100%"
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen
+          />
+
+          <Box
+            display="flex"
+            m={2}
+            justifyContent="center"
+            alignItems="center"
+            flexWrap="wrap"
+          >
+            <Box
+              p={2}
+              m={2}
+              color="#FFF"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
+              borderRadius="10px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
+            >
+              <Box fontWeight="fontWeightBold">Status: </Box>
+              {infosRover.status}
+            </Box>
+            <Box
+              p={2}
+              m={2}
+              color="#FFF"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
+              borderRadius="10px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
+            >
+              <Box fontWeight="fontWeightBold">Launch date: </Box>
+              {infosRover.launch_date}
+            </Box>
+            <Box
+              p={2}
+              m={2}
+              color="#FFF"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
+              borderRadius="10px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
+            >
+              <Box fontWeight="fontWeightBold">Landind date: </Box>
+              {infosRover.landing_date}
+            </Box>
+            <Box
+              p={2}
+              m={2}
+              color="#FFF"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
+              borderRadius="10px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
+            >
+              <Box fontWeight="fontWeightBold">Time on mars: </Box>
+              {infosRover.max_sol} sols
+            </Box>
+            <Box
+              p={2}
+              m={2}
+              color="#FFF"
+              bgcolor="#19103B"
+              border="1px solid #BBB"
+              borderRadius="10px"
+              height="50px"
+              width="150px"
+              minWidth="150px"
+            >
+              <Box fontWeight="fontWeightBold">Pictures took: </Box>
+              {infosRover.total_photos}
+            </Box>
+          </Box>
+        </Typography>
       </section>
     </>
   );

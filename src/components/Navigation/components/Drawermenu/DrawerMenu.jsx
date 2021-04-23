@@ -47,7 +47,7 @@ const DrawerMenu = () => {
           <IconContext.Provider
             value={{
               size: '2rem',
-              color: '#941b0c',
+              color: '#13103C',
               className: 'robot',
             }}
           >
@@ -103,22 +103,13 @@ const DrawerMenu = () => {
               <ListItemText>Spirit</ListItemText>
             </ListItemIcon>
           </ListItem>
-
-          {/* <Button
-            area-controls="menu"
-            variant="contained"
-            color="secondary"
-            size="large"
-          >
-            Explore
-          </Button> */}
         </List>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
         <IconContext.Provider
           value={{
             size: '2rem',
-            color: '#941b0c',
+            color: '#13103C',
             className: 'Menu-icon',
           }}
         >

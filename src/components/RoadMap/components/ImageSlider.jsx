@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-// import { Carousel } from 'react-responsive-carousel';
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -19,7 +18,6 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    // <Carousel>
     <section className="slider">
       <MdKeyboardArrowLeft className="left-arrow" onClick={prevSlide} />
       {slides.map((slide, index) => (
@@ -34,7 +32,6 @@ const ImageSlider = ({ slides }) => {
       ))}
       <MdKeyboardArrowRight className="right-arrow" onClick={nextSlide} />
     </section>
-    // </Carousel>
   );
 };
 

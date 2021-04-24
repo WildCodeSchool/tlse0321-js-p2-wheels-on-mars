@@ -7,8 +7,9 @@ import HeroBanner from './HeroBanner';
 import RoadMap from '../RoadMap/RoadMap';
 
 const useStyles = makeStyles(() => ({
-  root: {
+  colorGrid: {
     backgroundColor: '#13103B',
+    color: '#FFF',
   },
   paper: {
     textAlign: 'center',
@@ -22,9 +23,9 @@ const LayoutRoverPage = ({ name, iframe }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} className={classes.colorGrid}>
           <Box className={classes.alignement}>
             <HeroBanner name={name} iframe={iframe} />
           </Box>

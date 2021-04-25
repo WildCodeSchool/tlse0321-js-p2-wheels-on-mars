@@ -25,13 +25,13 @@ const Navigation = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
-      <AppBar color="primary">
+      <AppBar color="primary" position="sticky">
         <Toolbar>
           <Typography component={Link} to="/">
             <IconContext.Provider
               value={{
                 size: '4rem',
-                color: '#941b0c',
+                color: '#13103C',
                 className: 'logo-planet',
               }}
             >

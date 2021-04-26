@@ -3,7 +3,7 @@ import ScienceArticle from './ScienceArticle';
 const Science = () => (
   <>
     <header style={{ textAlign: 'center' }}>
-      <h2>Science</h2>
+      <h1>Science</h1>
     </header>
     <ScienceArticle />
   </>

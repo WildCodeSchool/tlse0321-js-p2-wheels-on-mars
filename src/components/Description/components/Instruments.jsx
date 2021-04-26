@@ -2,8 +2,8 @@ import InstrumentArticle from './InstrumentArticle';
 
 const Instruments = () => (
   <>
-    <header style={{ marginBottom: '2rem' }}>
-      <h2>Instruments</h2>
+    <header style={{ textAlign: 'center' }}>
+      <h1>Instruments</h1>
     </header>
     <InstrumentArticle />
   </>

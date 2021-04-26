@@ -54,7 +54,7 @@ const Missions = () => {
   return (
     <>
       <header style={{ textAlign: 'center' }}>
-        <h2>Mission overview</h2>
+        <h1>Mission overview</h1>
       </header>
       <Paper elevation={0}>
         <Container>

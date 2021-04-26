@@ -47,9 +47,6 @@ const useStyles = makeStyles({
     height: '60px',
     width: 'auto',
   },
-  pos: {
-    marginBottom: '2rem',
-  },
 });
 
 const Missions = () => {
@@ -59,7 +56,7 @@ const Missions = () => {
       <header style={{ textAlign: 'center' }}>
         <h2>Mission overview</h2>
       </header>
-      <Paper elevation={0} style={{ padding: '2rem' }}>
+      <Paper elevation={0}>
         <Container>
           <Box className={classes.box}>
             <Card className={classes.card}>

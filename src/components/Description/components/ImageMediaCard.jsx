@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   card: {
     height: '200px',
-    maxWidth: '80%',
+    maxWidth: '60%',
     display: 'flex',
     margin: '2rem auto',
     color: '#fff',
@@ -47,17 +47,19 @@ export default function ImgMediaCard() {
         component="img"
         alt="Space"
         height="100%"
-        image="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80"
+        image="https://mars.nasa.gov/layout/mars2020/images/mastcam-500x300.jpg"
         title="Space"
       />
       <CardActionArea className={classes.cardContent}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Space
+            Mastcam-Z
           </Typography>
           <Typography variant="body2" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            An advanced camera system with panoramic and stereoscopic imaging
+            capability with the ability to zoom. The instrument also will
+            determine mineralogy of the Martian surface and assist with rover
+            operations.
           </Typography>
         </CardContent>
         <CardActions className={classes.cardButton}>

@@ -85,7 +85,7 @@ const ScienceArticle = () => {
         <Typography variant="h4" align="center">
           4 Goals
         </Typography>
-        <Box display="flex" justifyContent="space-around" m={2}>
+        <Box display="flex" justifyContent="space-around" flexWrap="wrap" m={2}>
           <Box
             display="flex"
             flexDirection="column"

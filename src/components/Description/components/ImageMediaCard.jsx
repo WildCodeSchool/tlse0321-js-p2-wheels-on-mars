@@ -45,10 +45,10 @@ export default function ImgMediaCard() {
     <Card className={isMatch ? classes.cardResponsive : classes.card}>
       <CardMedia
         component="img"
-        alt="Space"
+        alt="Mastcam-Z"
         height="100%"
         image="https://mars.nasa.gov/layout/mars2020/images/mastcam-500x300.jpg"
-        title="Space"
+        title="Mastcam-Z"
       />
       <CardActionArea className={classes.cardContent}>
         <CardContent>

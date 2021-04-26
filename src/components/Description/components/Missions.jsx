@@ -4,11 +4,18 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import {
-  Container, List, ListItem, ListItemText,
+  Paper,
+  Container,
+  List,
+  ListItem,
+  ListItemText,
 } from '@material-ui/core';
 import Article from './Article';
 
 const useStyles = makeStyles({
+  containe: {
+    backgroundColor: '#fff',
+  },
   box: {
     backgroundColor: '#13103C',
     padding: '1rem',
@@ -19,6 +26,7 @@ const useStyles = makeStyles({
     minWidth: 200,
     maxWidth: 300,
     margin: '1rem',
+    textAlign: 'center',
     backgroundColor: ' #fff',
     transition: '0.3s',
     boxShadow: '0 8px 40px -12px rgba(0,0,0,0.3)',
@@ -48,83 +56,74 @@ const Missions = () => {
   const classes = useStyles();
   return (
     <>
-      <header className={classes.pos}>
-        <Typography variant="h4">Mission Overview</Typography>
-        <Typography variant="body1">Rover Name</Typography>
+      <header style={{ textAlign: 'center' }}>
+        <h2>Mission overview</h2>
       </header>
-      <Container>
-        <Box className={classes.box}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography
-                className={classes.cardTitle}
-                variant="h5"
-                color="textSecondary"
-                gutterBottom
-              >
-                <img
-                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/ringed-planet_1fa90.png"
-                  alt="planet"
-                  className={classes.img1}
-                />
-                Quick Facts :
-              </Typography>
-              <Box display="flex" justifyContent="center" alignContent="center">
-                <List dense="true">
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                </List>
-                <List dense="true">
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemText
-                      primary="Fact :"
-                      secondary="detail of the facts"
-                    />
-                  </ListItem>
-                </List>
-              </Box>
-              <Typography variant="body2" component="p">
-                <img
-                  src="http://assets.stickpng.com/images/58429400a6515b1e0ad75acc.png"
-                  alt="nasa-logo"
-                  className={classes.img2}
-                />
-                <br />
-                `&quot;to the space and beyond&quot;`
-              </Typography>
-            </CardContent>
-          </Card>
-          <Article />
-        </Box>
-      </Container>
+      <Paper elevation={0} style={{ padding: '2rem' }}>
+        <Container>
+          <Box className={classes.box}>
+            <Card className={classes.card}>
+              <CardContent>
+                <Typography
+                  className={classes.cardTitle}
+                  variant="h5"
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  <img
+                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/272/ringed-planet_1fa90.png"
+                    alt="planet"
+                    className={classes.img1}
+                  />
+                  Quick Facts :
+                </Typography>
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignContent="center"
+                >
+                  <List dense="true">
+                    <ListItem>
+                      <ListItemText
+                        primary="Mission Name: "
+                        secondary="Mars 2020"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText
+                        primary="Main Job: "
+                        secondary="Seek signs of ancient life and collect rock and soil samples"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText
+                        primary="Landing Site: "
+                        secondary="Jezero Crater, Mars"
+                      />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText
+                        primary="Mission Duration:"
+                        secondary="At least one Mars year (about 687 Earth days)"
+                      />
+                    </ListItem>
+                  </List>
+                </Box>
+                <Typography variant="body2" component="p">
+                  <img
+                    src="https://assets.stickpng.com/images/58429400a6515b1e0ad75acc.png"
+                    alt="nasa-logo"
+                    className={classes.img2}
+                  />
+                  <br />
+                  `&quot;Space is still a high priority&quot;`
+                </Typography>
+              </CardContent>
+            </Card>
+            <Article />
+          </Box>
+        </Container>
+      </Paper>
     </>
   );
 };

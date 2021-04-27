@@ -9,12 +9,12 @@ const Article = () => (
     <Typography variant="body1">
       Crater and acquires rock, soil, and air samples for onboard analysis. The
       car-size rover is about as tall as a basketball player and uses a 7
-      foot-long arm to place tools close to rocks selected for study.
-      Curiosity&#39s large size allows it to carry an advanced kit of 10 science
-      instruments. It has tools including 17 cameras, a laser to vaporize and
-      study small pinpoint spots of rocks at a distance, and a drill to collect
-      powdered rock samples. It hunts for special rocks that formed in water
-      and/or have signs of organics.
+      foot-long arm to place tools close to rocks selected for study. Curiositys
+      large size allows it to carry an advanced kit of 10 science instruments.
+      It has tools including 17 cameras, a laser to vaporize and study small
+      pinpoint spots of rocks at a distance, and a drill to collect powdered
+      rock samples. It hunts for special rocks that formed in water and/or have
+      signs of organics.
     </Typography>
     <br />
     <Typography variant="h5">Strong, Smart and Curious </Typography>

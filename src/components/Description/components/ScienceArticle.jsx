@@ -2,27 +2,29 @@ import {
   Paper, Typography, Container, Avatar, Box,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { useState } from 'react';
 
 const bullInfo = [
   {
     title: 'Geology Goal:',
-    text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam rerum natus. Inventore cum laudantium doloremque vel dignissimos cumque saepe dolor expedita, et, enim ab voluptate magni ipsum temporibus quo?
-    Similique, ad quos? Repellat nisi sunt earum repellendus voluptate sed ut laboriosam dicta. Quisquam voluptates deleniti, aliquam quia temporibus consequuntur itaque ducimus dolorum, atque odit quod, iusto repellendus placeat illum?"`,
+    text:
+      'The rovers are designed to study the rock record to reveal more about the geologic processes that created and modified the Martian crust and surface through time. Each layer of rock on the Martian surface contains a record of the environment in which it was formed. The rover seeks evidence of rocks that formed in water and that preserve evidence of organics, the chemical building blocks of life.',
   },
   {
-    title: 'Topology Goal:',
-    text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam rerum natus. Inventore cum laudantium doloremque vel dignissimos cumque saepe dolor expedita, et, enim ab voluptate magni ipsum temporibus quo?
-    Similique, ad quos? Repellat nisi sunt earum repellendus voluptate sed ut laboriosam dicta. Quisquam voluptates deleniti, aliquam quia temporibus consequuntur itaque ducimus dolorum, atque odit quod, iusto repellendus placeat illum?"`,
+    title: 'Climate Goal:',
+    text:
+      "Past Martian climate conditions are a focus of the Perseverance rover mission. The rover's instruments are looking for evidence of ancient habitable environments where microbial life could have existed in the past.",
   },
   {
     title: 'Biology samples:',
-    text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam rerum natus. Inventore cum laudantium doloremque vel dignissimos cumque saepe dolor expedita, et, enim ab voluptate magni ipsum temporibus quo?
-    Similique, ad quos? Repellat nisi sunt earum repellendus voluptate sed ut laboriosam dicta. Quisquam voluptates deleniti, aliquam quia temporibus consequuntur itaque ducimus dolorum, atque odit quod, iusto repellendus placeat illum?"`,
+    text: `The rovers focuses on surface-based studies of the Martian environment, seeking preserved signs of biosignatures in rock samples that formed in ancient Martian environments with conditions that might have been favorable to microbial life.
+    It is the first rover mission designed to seek signs of past microbial life. Earlier rovers first focused on and confirmed that Mars once had habitable conditions.`,
   },
   {
     title: 'Prepare human arrival on Mars:',
-    text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam rerum natus. Inventore cum laudantium doloremque vel dignissimos cumque saepe dolor expedita, et, enim ab voluptate magni ipsum temporibus quo?
-    Similique, ad quos? Repellat nisi sunt earum repellendus voluptate sed ut laboriosam dicta. Quisquam voluptates deleniti, aliquam quia temporibus consequuntur itaque ducimus dolorum, atque odit quod, iusto repellendus placeat illum?"`,
+    text: `The rovers are demonstrating key technologies for using natural resources in the Martian environment for life support and fuel. It is also monitoring environmental conditions so mission planners understand better how to protect future human explorers.
+    This science goal relates to national space policy for sending humans to Mars in the 2030s. Similar to the history of the exploration of Earth's moon, robotic missions to Mars provide a crucial understanding of the environment and test innovative technologies for future human exploration.
+    Investments in Mars 2020 technologies include contributions from NASA's Human Exploration and Operations (HEO) Mission Directorate and Space Technology Program (STP) as part of NASA's long-term efforts to develop future capabilities for human space exploration.`,
   },
 ];
 
@@ -51,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const ScienceArticle = () => {
+  const [textValue, setTextValue] = useState(0);
   const classes = useStyles();
   return (
     <Paper elevation={0}>
@@ -92,6 +95,7 @@ const ScienceArticle = () => {
             justifyContent="space-between"
           >
             <Avatar
+              onClick={() => setTextValue(0)}
               className={classes.large}
               src="https://images.unsplash.com/photo-1521401661174-c6ef32c9dfea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
             />
@@ -105,11 +109,12 @@ const ScienceArticle = () => {
             justifyContent="space-between"
           >
             <Avatar
+              onClick={() => setTextValue(1)}
               className={classes.large}
               src="https://images.unsplash.com/photo-1576158114131-f211996e9137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             />
             <Typography variant="h5" align="center">
-              Topography
+              Climate
             </Typography>
           </Box>
           <Box
@@ -118,6 +123,7 @@ const ScienceArticle = () => {
             justifyContent="space-between"
           >
             <Avatar
+              onClick={() => setTextValue(2)}
               className={classes.large}
               src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
             />
@@ -131,6 +137,7 @@ const ScienceArticle = () => {
             justifyContent="space-between"
           >
             <Avatar
+              onClick={() => setTextValue(3)}
               className={classes.large}
               src="https://images.unsplash.com/photo-1541873676-a18131494184?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=661&q=80"
             />
@@ -146,13 +153,13 @@ const ScienceArticle = () => {
                 variant="h4"
                 style={{ padding: '1rem', textAlign: 'start' }}
               >
-                {bullInfo[2].title}
+                {bullInfo[textValue].title}
               </Typography>
               <Typography
                 variant="body1"
                 style={{ padding: '1rem', textAlign: 'start' }}
               >
-                {bullInfo[2].text}
+                {bullInfo[textValue].text}
               </Typography>
             </Box>
           </Box>

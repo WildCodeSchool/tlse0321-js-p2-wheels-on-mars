@@ -1,25 +1,67 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import PictureCard from './PictureCard';
+import './picture.css';
 
 // ce composant est censee recup les donnes des photo des rover
 const Pictures = ({ name }) => {
-  const [result, setResult] = useState([]);
+  const [totalPicture, setTotalPicture] = useState([]);
+  const [limitedPicture, setLimitedPicture] = useState([]);
+  const [rangeValue, setRangeValue] = useState(5);
+  const [solInputValue, setSolInputValue] = useState(55);
+
   useEffect(() => {
     axios
       .get(
-        `https://mars-photos.herokuapp.com/api/v1/rovers/${name}/latest_photos`,
+        `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`,
       )
-      .then((response) => response.data)
+      .then((res) => res.data)
       .then((data) => {
-        setResult(data.latest_photos);
+        setTotalPicture(data.photos);
       });
-  }, []);
+    const limitPicture = () => {
+      totalPicture.length = rangeValue;
+      setLimitedPicture(totalPicture);
+    };
+    limitPicture();
+  }, [totalPicture]);
+
   return (
-    <>
-      {result.map((photo) => (
-        <img src={photo.img_src} alt={photo.Id} />
-      ))}
-    </>
+    <div className="pictures">
+      <h2>Rover pictures</h2>
+      <div>
+        <form>
+          <label htmlFor="limitPicture" className="limitPictureLabel">
+            <span>Max pictures {rangeValue} :</span>
+            <input
+              id="limitPicture"
+              type="range"
+              min="1"
+              max="250"
+              step="1"
+              value={rangeValue}
+              text-value={rangeValue}
+              onChange={(e) => setRangeValue(e.target.value)}
+            />
+          </label>
+          <label htmlFor="solNumber" className="solNumber">
+            <span>SOL :</span>
+            <input
+              type="number"
+              value={solInputValue}
+              onChange={(e) => setSolInputValue(e.target.value)}
+            />
+          </label>
+        </form>
+      </div>
+      <ul className="pictures-list">
+        {limitedPicture
+          .filter((rover) => rover.sol <= solInputValue)
+          .map((rover) => (
+            <PictureCard rover={rover} key={rover.id} />
+          ))}
+      </ul>
+    </div>
   );
 };
 export default Pictures;

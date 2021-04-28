@@ -1,4 +1,17 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 const Card = ({ name, img }) => {
+  const [infosRover, setInfosRover] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://mars-photos.herokuapp.com/api/v1/manifests/${name}`)
+      .then((response) => response.data)
+      .then((data) => {
+        setInfosRover(data.photo_manifest);
+      });
+  }, []);
   const CardContainer = {
     display: 'flex',
     flexDirection: 'column',
@@ -64,10 +77,10 @@ const Card = ({ name, img }) => {
       <h1 style={CardTitle}>{name}</h1>
       <div style={CardInfos}>
         <h2 style={CardStatus}>
-          Status Mission : <strong>Active</strong>
+          Status Mission : <strong>{infosRover.status}</strong>
         </h2>
         <h2 style={CardStatus}>
-          Location : <strong>ISS</strong>
+          Total Photos : <strong>{infosRover.total_photos}</strong>
         </h2>
       </div>
       <p style={CardText}>

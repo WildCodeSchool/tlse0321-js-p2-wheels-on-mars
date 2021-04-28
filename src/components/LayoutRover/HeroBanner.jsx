@@ -55,7 +55,7 @@ const HeroBanner = ({ name, iframe }) => {
             </BoxInformation>
             <BoxInformation>
               <Box fontWeight="fontWeightBold">Time on mars: </Box>
-              {infosRover.max_sol}
+              {infosRover.max_sol} sols
             </BoxInformation>
             <BoxInformation>
               <Box fontWeight="fontWeightBold">Pictures took: </Box>

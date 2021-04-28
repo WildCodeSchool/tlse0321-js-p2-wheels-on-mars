@@ -19,7 +19,7 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <section className="slider">
-      <MdKeyboardArrowLeft className="left-arrow" onClick={prevSlide} />
+      <MdKeyboardArrowLeft className="arrow" onClick={prevSlide} />
       {slides.map((slide, index) => (
         <div
           className={index === current ? 'slide active' : 'slide'}
@@ -30,7 +30,7 @@ const ImageSlider = ({ slides }) => {
           )}
         </div>
       ))}
-      <MdKeyboardArrowRight className="right-arrow" onClick={nextSlide} />
+      <MdKeyboardArrowRight className="arrow" onClick={nextSlide} />
     </section>
   );
 };

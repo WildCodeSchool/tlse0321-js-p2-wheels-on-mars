@@ -1,0 +1,14 @@
+.HomeMessage {
+  padding: 100px;
+  justify-content: center;
+  text-align: center;
+}
+.HomeMessage h2 {
+  margin: 3px;
+  font-size: 24px;
+  justify-content: flex-start;
+}
+.HomeMessage p {
+  font-size: 16px;
+  justify-content: flex-end;
+}

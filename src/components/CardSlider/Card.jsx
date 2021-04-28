@@ -1,4 +1,4 @@
-const Card = () => {
+const Card = ({ name, img }) => {
   const CardContainer = {
     display: 'flex',
     flexDirection: 'column',
@@ -12,7 +12,7 @@ const Card = () => {
   const ImgCardHeader = {
     width: '100%',
     height: '40%',
-    background: 'url("#")center',
+    background: `url(${img})center`,
     backgroundSize: 'cover',
     margin: '0 0 ',
   };
@@ -61,7 +61,7 @@ const Card = () => {
   return (
     <div style={CardContainer}>
       <div style={ImgCardHeader} />
-      <h1 style={CardTitle}>Rover Name</h1>
+      <h1 style={CardTitle}>{name}</h1>
       <div style={CardInfos}>
         <h2 style={CardStatus}>
           Status Mission : <strong>Active</strong>

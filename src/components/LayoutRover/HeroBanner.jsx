@@ -2,9 +2,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import BoxInformation from './BoxInformation';
 
 const HeroBanner = ({ name, iframe }) => {
   const [infosRover, setInfosRover] = useState([]);
+
   useEffect(() => {
     axios
       .get(`https://mars-photos.herokuapp.com/api/v1/manifests/${name}`)
@@ -13,100 +15,52 @@ const HeroBanner = ({ name, iframe }) => {
         setInfosRover(data.photo_manifest);
       });
   }, []);
+
   return (
     <>
-      <section style={{ width: '100%', color: '#FFF' }}>
+      <section>
         <Typography component="div">
-          <Box letterSpacing={1} fontSize="1.8rem">
-            <h1>{name}</h1>
+          <Box>
+            <Box letterSpacing={1} fontSize="1.8rem">
+              <h1>{name}</h1>
+            </Box>
+            <iframe
+              src={iframe}
+              title="rover"
+              height="500"
+              width="100%"
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen
+            />
           </Box>
-          <iframe
-            src={iframe}
-            title="rover"
-            height="500"
-            width="100%"
-            scrolling="no"
-            frameBorder="0"
-            allowFullScreen
-          />
-
           <Box
             display="flex"
-            m={2}
             justifyContent="center"
             alignItems="center"
             flexWrap="wrap"
+            m={1}
           >
-            <Box
-              p={2}
-              m={2}
-              color="#FFF"
-              bgcolor="#19103B"
-              border="1px solid #BBB"
-              borderRadius="10px"
-              height="50px"
-              width="150px"
-              minWidth="150px"
-            >
+            <BoxInformation>
               <Box fontWeight="fontWeightBold">Status: </Box>
               {infosRover.status}
-            </Box>
-            <Box
-              p={2}
-              m={2}
-              color="#FFF"
-              bgcolor="#19103B"
-              border="1px solid #BBB"
-              borderRadius="10px"
-              height="50px"
-              width="150px"
-              minWidth="150px"
-            >
+            </BoxInformation>
+            <BoxInformation>
               <Box fontWeight="fontWeightBold">Launch date: </Box>
               {infosRover.launch_date}
-            </Box>
-            <Box
-              p={2}
-              m={2}
-              color="#FFF"
-              bgcolor="#19103B"
-              border="1px solid #BBB"
-              borderRadius="10px"
-              height="50px"
-              width="150px"
-              minWidth="150px"
-            >
+            </BoxInformation>
+            <BoxInformation>
               <Box fontWeight="fontWeightBold">Landind date: </Box>
               {infosRover.landing_date}
-            </Box>
-            <Box
-              p={2}
-              m={2}
-              color="#FFF"
-              bgcolor="#19103B"
-              border="1px solid #BBB"
-              borderRadius="10px"
-              height="50px"
-              width="150px"
-              minWidth="150px"
-            >
+            </BoxInformation>
+            <BoxInformation>
               <Box fontWeight="fontWeightBold">Time on mars: </Box>
               {infosRover.max_sol} sols
-            </Box>
-            <Box
-              p={2}
-              m={2}
-              color="#FFF"
-              bgcolor="#19103B"
-              border="1px solid #BBB"
-              borderRadius="10px"
-              height="50px"
-              width="150px"
-              minWidth="150px"
-            >
+            </BoxInformation>
+            <BoxInformation>
               <Box fontWeight="fontWeightBold">Pictures took: </Box>
               {infosRover.total_photos}
-            </Box>
+            </BoxInformation>
           </Box>
         </Typography>
       </section>

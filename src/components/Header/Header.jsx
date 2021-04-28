@@ -1,9 +1,30 @@
-import React from 'react';
+import './header.css';
 
 const Header = () => (
-  <div>
-    <h3>This is the footer !</h3>
-  </div>
+  <>
+    <header className="headerHomePage">
+      <iframe
+        src="https://solarsystem.nasa.gov/gltf_embed/2372"
+        title="mars 3d"
+        height="500"
+        width="100%"
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen
+        backgroundImage="https://leblob.fr/sites/default/files/styles/full_width_big/public/2019-02/astro.jpg?h=1257b885&itok=T0ew8nOO"
+      />
+      <div className="headerButton">
+        <h1>Perseverance et son acolyte Ingenuity</h1>
+        <a
+          href="https://www.cite-espace.com/actualites-spatiales/ingenuity-premier-survol-mars/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Voir l`actu de Mars !
+        </a>
+      </div>
+    </header>
+  </>
 );
 
 export default Header;

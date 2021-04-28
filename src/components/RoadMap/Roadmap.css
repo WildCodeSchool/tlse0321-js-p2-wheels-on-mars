@@ -1,51 +1,93 @@
-.slider {
-  margin: 2rem auto;
-  height: auto;
-  display: flex;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  margin: 2rem auto;
-  width: 100%;
-  height: 100%;
+.Roadmap {
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
+  color: #fff;
+  display: block;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
-
-.right-arrow {
-  width: 10%;
+.slider {
+  align-items: center;
   display: flex;
-  margin: 2rem;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-  height: 10%;
+  height: auto;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1000px;
+  position: relative;
+  width: 100%;
+}
+.image {
+  background-color: #000;
+  border-radius: 10px;
+  height: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  width: 100%;
 }
 
 .left-arrow {
-  width: 10%;
-  display: flex;
-  margin: 2rem;
-  font-size: 3rem;
+  border-radius: 500000px;
   color: #000;
-  z-index: 10;
   cursor: pointer;
-  -webkit-user-select: none;
+  margin: 0 0.5rem 0 0;
   user-select: none;
-  height: 10%;
+  height: 50px;
+  width: 50px;
+  min-height: 30px;
+  min-width: 30px;
+  -webkit-user-select: none;
+}
+
+.right-arrow {
+  border-radius: 500000px;
+  color: #000;
+  cursor: pointer;
+  margin: 0 0 0 0.5rem;
+  user-select: none;
+  height: 50px;
+  width: 50px;
+  min-height: 30px;
+  min-width: 30px;
+  -webkit-user-select: none;
 }
 
 .slide {
-  width: auto;
-  transition-duration: 1s ease;
+  transition: transform 500ms ease-out;
+  transform: scale(0.9);
 }
 
 .slide.active {
-  transition-duration: 1s;
-  transform: scale(1.08);
+  transform: scale(1);
+}
+
+@media screen and (min-width: 800px) {
+  .Roadmap {
+    font-size: 1rem;
+  }
+  .image {
+    height: 500px;
+    max-height: 500px;
+    object-fit: fill;
+    width: 700px;
+  }
+  .left-arrow,
+  .right-arrow {
+    margin: 0 0.5rem;
+  }
+  .arrHover {
+    transform: scale(1);
+    transition: transform 200ms ease-out;
+  }
+  .arrHover:hover {
+    background-color: rgba(7, 7, 141, 0.3);
+    color: #fff;
+  }
+  .arrHover:active {
+    transform: scale(0.9);
+  }
 }

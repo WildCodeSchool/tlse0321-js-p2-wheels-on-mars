@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Roadmap.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 const ImageSlider = ({ slides }) => {
@@ -19,18 +20,27 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <section className="slider">
-      <MdKeyboardArrowLeft className="left-arrow" onClick={prevSlide} />
+      <MdKeyboardArrowLeft
+        className="left-arrow arrHover"
+        onClick={prevSlide}
+      />
       {slides.map((slide, index) => (
         <div
           className={index === current ? 'slide active' : 'slide'}
           key={slide}
         >
           {index === current && (
-            <img src={slide.image} alt="RoverMap" className="image" />
+            <div>
+              <h2 className="Roadmap">{slide.text}</h2>
+              <img src={slide.image} alt="RoverMap" className="image" />
+            </div>
           )}
         </div>
       ))}
-      <MdKeyboardArrowRight className="right-arrow" onClick={nextSlide} />
+      <MdKeyboardArrowRight
+        className="right-arrow arrHover"
+        onClick={nextSlide}
+      />
     </section>
   );
 };

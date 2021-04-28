@@ -1,6 +1,6 @@
-import './Roadmap.css';
-import ImageSlider from './components/ImageSlider';
-import SliderData from './components/SliderData';
+import ImageSlider from './ImageSlider';
+
+const SliderData = require('../../constants/ROADMAP_DATA');
 
 function RoadMap() {
   return <ImageSlider slides={SliderData} />;

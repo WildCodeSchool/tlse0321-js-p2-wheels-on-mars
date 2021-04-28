@@ -1,4 +1,4 @@
-.Roadmap {
+.roadmap {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   color: #fff;
@@ -17,7 +17,6 @@
   height: auto;
   justify-content: center;
   margin: 2rem auto;
-  max-width: 1000px;
   position: relative;
   width: 100%;
 }
@@ -65,8 +64,9 @@
   transform: scale(1);
 }
 
+/* MEDIA QUERY POUR LA VERSION MOBILE */
 @media screen and (min-width: 800px) {
-  .Roadmap {
+  .roadmap {
     font-size: 1rem;
   }
   .image {
@@ -78,16 +78,16 @@
   .left-arrow,
   .right-arrow {
     margin: 0 0.5rem;
-  }
-  .arrHover {
     transform: scale(1);
     transition: transform 200ms ease-out;
   }
-  .arrHover:hover {
+  .left-arrow:hover,
+  .right-arrow:hover {
     background-color: rgba(7, 7, 141, 0.3);
     color: #fff;
   }
-  .arrHover:active {
+  .left-arrow:active,
+  .right-arrow:active {
     transform: scale(0.9);
   }
 }

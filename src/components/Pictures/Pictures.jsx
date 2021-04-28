@@ -99,7 +99,7 @@ const Pictures = ({ name }) => {
           cellHeight={300}
           spacing={20}
           cols={`${isMatch ? 1 : 3}`}
-          style={{ width: '80%', height: 'auto' }}
+          style={{ width: `${isMatch ? '60%' : '80%'}`, height: 'auto' }}
         >
           {limitedPicture
             .filter((rover) => rover.sol <= solInputValue)

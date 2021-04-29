@@ -9,7 +9,8 @@ const spirit = require('../../constants/SPIRIT_ROVER_3D_URL');
 const CardSlider = () => {
   const SliderContainer = {
     margin: '2rem auto',
-    backgroundColor: 'darkgray',
+    padding: '2rem',
+    backgroundColor: '#13103b93',
   };
 
   const slides = [
@@ -22,7 +23,7 @@ const CardSlider = () => {
   return (
     <>
       <header style={{ textAlign: 'center' }}>
-        <h1>Choose your rover</h1>
+        <h1>Exploration rovers:</h1>
       </header>
       <div style={SliderContainer}>
         <Carousel slides={slides} interval={1000} />

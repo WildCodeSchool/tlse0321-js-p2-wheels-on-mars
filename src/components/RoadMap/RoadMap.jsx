@@ -1,4 +1,4 @@
-import './Roadmap.css';
+import './roadmap.css';
 import ImageSlider from './components/ImageSlider';
 import SliderData from './components/SliderData';
 

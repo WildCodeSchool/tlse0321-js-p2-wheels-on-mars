@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// ce composant est censee recup les donnes des photo des rover
+// This components get all pictures, filter and send the result in the "PictureCard" component.
 const Pictures = ({ name }) => {
   const [totalPicture, setTotalPicture] = useState([]);
   const [limitedPicture, setLimitedPicture] = useState([]);

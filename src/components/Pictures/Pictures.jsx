@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import PictureCard from './PictureCard';
 import './picture.css';
 
-// ce composant est censee recup les donnes des photo des rover
+// This components get all pictures, filter and send the result in the "PictureCard" component.
 const Pictures = ({ name }) => {
   const [totalPicture, setTotalPicture] = useState([]);
   const [limitedPicture, setLimitedPicture] = useState([]);
@@ -37,7 +37,7 @@ const Pictures = ({ name }) => {
               id="limitPicture"
               type="range"
               min="1"
-              max="250"
+              max="350"
               step="1"
               value={rangeValue}
               text-value={rangeValue}

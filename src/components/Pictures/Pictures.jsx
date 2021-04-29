@@ -76,7 +76,7 @@ const Pictures = ({ name }) => {
               id="limitPicture"
               type="range"
               min="1"
-              max="250"
+              max="100"
               step="1"
               value={rangeValue}
               text-value={rangeValue}

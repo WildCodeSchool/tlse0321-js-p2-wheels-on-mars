@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Card = ({ name, img }) => {
+const Card = ({ name, img, text }) => {
   const [infosRover, setInfosRover] = useState([]);
 
   useEffect(() => {
@@ -83,17 +83,14 @@ const Card = ({ name, img }) => {
           Total Photos : <strong>{infosRover.total_photos}</strong>
         </h2>
       </div>
-      <p style={CardText}>
-        Le Crew Dragon est une capsule habitée de SpaceX, un dérivé de la
-        capsule Dragon utilisée pour le ravitaillement de la Station spatiale
-        internationale. ... Il peut transporter 6 tonnes de charge utile à
-        destination de la Station spatiale internationale et redescendre 3
-        tonnes de fret.
-      </p>
+      <p style={CardText}>{text}</p>
       <h2 style={CardStatus}>
         Article :{' '}
-        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow">
-          This is a link
+        <a
+          href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow"
+          style={CardButton}
+        >
+          See more about his rover
         </a>
       </h2>
       <button type="button" style={CardButton}>

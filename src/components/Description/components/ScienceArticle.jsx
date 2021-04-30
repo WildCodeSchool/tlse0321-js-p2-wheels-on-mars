@@ -1,5 +1,10 @@
 import {
-  Paper, Typography, Container, Avatar, Box,
+  Paper,
+  Typography,
+  Container,
+  Avatar,
+  Box,
+  ButtonBase,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
@@ -89,10 +94,13 @@ const ScienceArticle = () => {
           4 Goals
         </Typography>
         <Box display="flex" justifyContent="space-around" flexWrap="wrap" m={2}>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
+          <ButtonBase
+            centerRipple="true"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
           >
             <Avatar
               onClick={() => setTextValue(0)}
@@ -102,11 +110,14 @@ const ScienceArticle = () => {
             <Typography variant="h5" align="center">
               Geology
             </Typography>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
+          </ButtonBase>
+          <ButtonBase
+            centerRipple="true"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
           >
             <Avatar
               onClick={() => setTextValue(1)}
@@ -116,11 +127,14 @@ const ScienceArticle = () => {
             <Typography variant="h5" align="center">
               Climate
             </Typography>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
+          </ButtonBase>
+          <ButtonBase
+            centerRipple="true"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
           >
             <Avatar
               onClick={() => setTextValue(2)}
@@ -130,11 +144,14 @@ const ScienceArticle = () => {
             <Typography variant="h5" align="center">
               Biology
             </Typography>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
+          </ButtonBase>
+          <ButtonBase
+            centerRipple="true"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
           >
             <Avatar
               onClick={() => setTextValue(3)}
@@ -144,7 +161,7 @@ const ScienceArticle = () => {
             <Typography variant="h5" align="center">
               Human arrival
             </Typography>
-          </Box>
+          </ButtonBase>
         </Box>
         <Paper elevation={3} className={classes.box}>
           <Box display="flex" justifyContent="space-between">

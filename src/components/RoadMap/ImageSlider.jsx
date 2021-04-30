@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './roadmap.css';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 const ImageSlider = ({ slides }) => {
@@ -26,7 +27,10 @@ const ImageSlider = ({ slides }) => {
           key={slide}
         >
           {index === current && (
-            <img src={slide.image} alt="RoverMap" className="image" />
+            <div>
+              <h2 className="roadmap">{slide.text}</h2>
+              <img src={slide.image} alt="RoverMap" className="image" />
+            </div>
           )}
         </div>
       ))}

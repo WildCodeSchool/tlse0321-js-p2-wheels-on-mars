@@ -1,0 +1,93 @@
+.roadmap {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+.slider {
+  align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin: 2rem auto;
+  position: relative;
+  width: 100%;
+}
+.image {
+  background-color: #000;
+  border-radius: 10px;
+  height: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.left-arrow {
+  border-radius: 500000px;
+  color: #000;
+  cursor: pointer;
+  margin: 0 0.5rem 0 0;
+  user-select: none;
+  height: 50px;
+  width: 50px;
+  min-height: 30px;
+  min-width: 30px;
+  -webkit-user-select: none;
+}
+
+.right-arrow {
+  border-radius: 500000px;
+  color: #000;
+  cursor: pointer;
+  margin: 0 0 0 0.5rem;
+  user-select: none;
+  height: 50px;
+  width: 50px;
+  min-height: 30px;
+  min-width: 30px;
+  -webkit-user-select: none;
+}
+
+.slide {
+  transition: transform 500ms ease-out;
+  transform: scale(0.9);
+}
+
+.slide.active {
+  transform: scale(1);
+}
+
+/* MEDIA QUERY POUR LA VERSION MOBILE */
+@media screen and (min-width: 800px) {
+  .roadmap {
+    font-size: 1rem;
+  }
+  .image {
+    height: 500px;
+    max-height: 500px;
+    object-fit: fill;
+    width: 700px;
+  }
+  .left-arrow,
+  .right-arrow {
+    margin: 0 0.5rem;
+    transform: scale(1);
+    transition: transform 200ms ease-out;
+  }
+  .left-arrow:hover,
+  .right-arrow:hover {
+    background-color: rgba(7, 7, 141, 0.3);
+    color: #fff;
+  }
+  .left-arrow:active,
+  .right-arrow:active {
+    transform: scale(0.9);
+  }
+}

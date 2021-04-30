@@ -1,7 +1,43 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import PictureCard from './PictureCard';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './picture.css';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  },
+  gridList: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'left',
+    flexWrap: 'wrap',
+    padding: '1rem',
+  },
+  listTile: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  tileBar: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+}));
 
 // This components get all pictures, filter and send the result in the "PictureCard" component.
 const Pictures = ({ name }) => {
@@ -9,6 +45,9 @@ const Pictures = ({ name }) => {
   const [limitedPicture, setLimitedPicture] = useState([]);
   const [rangeValue, setRangeValue] = useState(5);
   const [solInputValue, setSolInputValue] = useState(55);
+  const themeUse = useTheme();
+  const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
+  const classes = useStyles();
 
   useEffect(() => {
     axios
@@ -24,10 +63,10 @@ const Pictures = ({ name }) => {
       setLimitedPicture(totalPicture);
     };
     limitPicture();
-  }, [totalPicture]);
+  }, [totalPicture, rangeValue]);
 
   return (
-    <div className="pictures">
+    <div className={classes.pictures}>
       <h2>Rover pictures</h2>
       <div>
         <form>
@@ -37,7 +76,7 @@ const Pictures = ({ name }) => {
               id="limitPicture"
               type="range"
               min="1"
-              max="350"
+              max="100"
               step="1"
               value={rangeValue}
               text-value={rangeValue}
@@ -54,13 +93,35 @@ const Pictures = ({ name }) => {
           </label>
         </form>
       </div>
-      <ul className="pictures-list">
-        {limitedPicture
-          .filter((rover) => rover.sol <= solInputValue)
-          .map((rover) => (
-            <PictureCard rover={rover} key={rover.id} />
-          ))}
-      </ul>
+      <div className={classes.container}>
+        <GridList
+          className={classes.gridList}
+          cellHeight={300}
+          spacing={20}
+          cols={`${isMatch ? 1 : 3}`}
+          style={{ width: `${isMatch ? '60%' : '80%'}`, height: 'auto' }}
+        >
+          {limitedPicture
+            .filter((rover) => rover.sol <= solInputValue)
+            .map((rover) => (
+              <GridListTile key={rover.img} className={classes.listTile}>
+                <img src={rover.img_src} alt={rover.rover.name} />
+                <GridListTileBar
+                  title={rover.rover.name}
+                  subtitle={(
+                    <span>
+                      Cam: {rover.camera.full_name}
+                      <br />
+                      Sol: {rover.sol}
+                      <br />
+                      Earth Date: {rover.earth_date}
+                    </span>
+                  )}
+                />
+              </GridListTile>
+            ))}
+        </GridList>
+      </div>
     </div>
   );
 };

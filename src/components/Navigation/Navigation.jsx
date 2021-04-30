@@ -25,8 +25,7 @@ const Navigation = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
-
-      <AppBar color="#fff" position="sticky" elevation={0}>
+      <AppBar color="#fff" position="sticky" elevation={1}>
         <Toolbar>
           <Typography component={Link} to="/">
             <IconContext.Provider

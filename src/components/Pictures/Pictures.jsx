@@ -29,10 +29,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     padding: '1rem',
   },
-  listTile: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   tileBar: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -104,7 +100,7 @@ const Pictures = ({ name }) => {
           {limitedPicture
             .filter((rover) => rover.sol <= solInputValue)
             .map((rover) => (
-              <GridListTile key={rover.img} className={classes.listTile}>
+              <GridListTile key={rover.img}>
                 <img src={rover.img_src} alt={rover.rover.name} />
                 <GridListTileBar
                   title={rover.rover.name}

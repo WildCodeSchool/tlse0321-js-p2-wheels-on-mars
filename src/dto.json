@@ -1,0 +1,85 @@
+{
+	"rovers": [{
+		"traverseMap":[{
+			"curiosity":{
+				"title":"Curiosity Traverse Map",
+				"image":"https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23412.jpg"
+			},
+			"opportunity":{
+				"title":"Opportunity Traverse Map",
+				"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Opportunity_rover_lifetime_progress_map.jpg/400px-Opportunity_rover_lifetime_progress_map.jpg"
+			},
+			"perseverance":{
+				"title":"https://i.postimg.cc/hv5gfk3R/good45798-PIA24486-Drive-Map.png",
+				"image":"Perseverance Traverse Map"
+			},
+			"spirit":{
+				"title":"Total rovers on Mars",
+				"image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA24320-MarsLandingSites-20201216.jpg/600px-PIA24320-MarsLandingSites-20201216.jpg"
+			}
+		}],
+		"curiosity":{
+			"id": 1,
+			"name":"Curiosity",
+			"iframe":"https://mars.nasa.gov/gltf_embed/24584",
+			"img": "/curiosity.jpg",
+			"text":"Curiosity set out to answer the question: Did Mars ever have the right environmental conditions to support small life forms called microbes? Early in its mission, Curiositys scientific tools found chemical and mineral evidence of past habitable environments on Mars. It continues to explore the rock record from a time when Mars could have been home to microbial life.",
+			"mission":{
+				"title1":"Curiosity Rover Science Surveying Gale Crater Curiosity explores Gale",
+				"title2":"Strong, Smart and Curious",
+				"title3":"Coming in for a Landing",
+				"text1":"Crater and acquires rock, soil, and air samples for onboard analysis. The car-size rover is about as tall as a basketball player and uses a 7 foot-long arm to place tools close to rocks selected for study. Curiositys large size allows it to carry an advanced kit of 10 science instruments. It has tools including 17 cameras, a laser to vaporize and study small pinpoint spots of rocks at a distance, and a drill to collect powdered rock samples. It hunts for special rocks that formed in water and/or have signs of organics.",
+				"text2":"Curiosity carries the biggest, most advanced instruments for scientific studies ever sent to the Martian surface. The history of Martian climate and geology is written in the chemistry and structure of the rocks and soil. Curiosity reads this record by analyzing powdered samples drilled from rocks. It also measures the chemical fingerprints present in different rocks and soils to determine their composition and history, especially their past interactions with water.",
+				"text3":"Mars Science Laboratory arrived at Mars through technological innovations that tested a completely new landing method. The spacecraft descended on a parachute, then during the final seconds before landing, the landing system fired rockets to allow it to hover while a tether lowered Curiosity to the surface. The rover landed on its wheels, the tether was cut, and the landing system flew off to crash-land a safe distance away.",
+				"text4":"The Mars Science Laboratory mission represents a huge step in Mars exploration because it has: Demonstrated the ability to land a very large, heavy rover to the surface of Mars Demonstrated the ability to land more precisely in a 12.4-mile (20-kilometer) landing area Demonstrated long-range mobility on Mars for studying diverse environments and analyzing samples found in different settings.",
+				"facts":{
+					"missionName":"Mars Science Laboratory/Curiosity",
+					"mainJob": "Finding evidence of a past environment well suited to supporting microbial life.",
+					"LandingSite": "Gale Crater",
+					"missionDuration": "2012 - Present"
+				}
+			},
+			"science":{
+				"img":"https://images-assets.nasa.gov/image/PIA14165/PIA14165~orig.jpg",
+				"text1":"Landing at Gale Crater, Mars Science Laboratory is assessing whether Mars ever had an environment capable of supporting microbial life. Determining past habitability on Mars gives NASA and the scientific community a better understanding of whether life could have existed on the red planet and, if it could have existed, an idea of where to look for it in the future.",
+				"text2":"The Mars Science Laboratory mission and its Curiosity rover mark a transition between the themes of 'Follow the Water' and 'Seek Signs of Life'. In addition to landing in a place with past evidence of water, Curiosity is seeking evidence of organics, the chemical building blocks of life. Places with water and the chemistry needed for life potentially provide habitable conditions.",
+				"goals":{
+					"goal1":"Life",
+					"goal2":"Climate",
+					"goal3":"Geology",
+					"goal4":"Human Arrival",
+					"text1":"The first step in understanding the possibility of past or present life on Mars is to determine whether the red planet ever had environmental conditions able to support life. Now that NASA's two Mars Exploration Rovers, Spirit and Opportunity, have found compelling evidence that liquid water once persisted on the surface of Mars, scientists hope to determine if other things necessary for life were also present. With a single rover bigger than both the Viking landers sent to Mars in the 1970s, Mars Science Laboratory looks for chemical elements that are the building blocks of life. These building blocks include six elements necessary to all life on Earth: carbon, hydrogen, nitrogen, oxygen, phosphorus, and sulfur. Life requires small amounts of other elements, such as iron, along with sources of energy. On Earth, this energy comes from sunlight or from electrons moving back and forth between elements and compounds in nature. Life also requires a stable enough environment to get a foothold without being eradicated by natural hazards such as volcanic explosions or excessive ultraviolet radiation. The Mars Science Laboratory is studying carbon and water cycles on the planet through its history. That is, it seeks to determine in what form and amount carbon and water is stored on the planet or in its atmosphere and how that may have changed through time.",
+					"text2":"Mars Science Laboratory is characterizing Mars' ancient climate and climate processes for the lower and upper atmosphere. In the past, a warmer Mars might have supported a thicker, wetter atmosphere. But now, with its thin, cold atmosphere, much of the water on Mars has left the surface and atmosphere. Most of it is probably trapped under the surface, either as ice or possibly in liquid form if any exists near a heat source on the planet, such as a volcanic 'hot spring'. An earlier thicker, wetter atmosphere may have provided better environmental conditions for supporting microbial life in Mars' early history. Mars Science Laboratory allows scientists to determine more precisely the composition of the Martian atmosphere, for instance, by measuring the stable isotopes of elements such as carbon. (Isotopes are atoms of the same element that have different masses because they have a different number of neutrons in the nucleus.) Most elements of biological interest have two or more stable isotopes. Organisms often selectively use particular isotopes based on their availability and mass. Environmental conditions also affect the availability of various isotopes. Mars Science Laboratory looks for biosignatures - signs of life - such as abrupt changes in isotopic abundance that might be associated with life, and investigates the composition of rocks, soils, and land forms that might be linked with changes in the planet's atmosphere over time.",
+					"text3":"A record of Mars' history is folded in the layers of the martian surface -- in essence, geology's version of tree rings. Mars Science Laboratory studies the rock and soil record in order to understand the geologic processes that created and modified the martian crust and surface through time. In particular, it looks for evidence of rocks that formed in the presence of water.",
+					"text4":"By demonstrating an ability to land large, heavy payloads on the surface, Mars Science Laboratory paves the way for sending equipment and the huge infrastructure needed by any human explorers of the future. Experience in precision landing techniques also provides the first early steps in developing an ability to send astronauts to a given location safely and reliably. A better understanding and characterization of radiation levels at the surface of Mars will help mission planners understand potential hazards faced by any future astronaut crews and design methods for protecting their health."
+				}
+			},	
+			"technique":{
+				"img":"https://mars.nasa.gov/internal_resources/629",
+				"cameras":{
+					"cam1":{
+						"name":"Mast Camera (Mastcam)",
+						"text":"The Mast Camera, or Mastcam for short, takes color images and color video footage of the Martian terrain. The images can be stitched together to create panoramas of the landscape around the rover. Like the cameras on the Mars Exploration Rovers that landed on the red planet in 2004, the Mastcam design consists of two camera systems mounted on a mast extending upward from the Mars Science Laboratory rover deck (body). The Mastcam can be used to study the Martian landscape, rocks, and soils; to view weather phenomena; and to support the driving and sampling operations of the rover.",
+						"img":"https://mars.nasa.gov/internal_resources/630"
+					},
+					"cam2":{
+							"name":"Mars Hand Lens Imager (MAHLI)",
+							"text":"MAHLI provides earthbound scientists with close-up views of the minerals, textures, and structures in martian rocks and the surface layer of rocky debris and dust. The self-focusing, roughly 4-centimeter-wide (1.5-inch-wide) camera takes color images of features as small as 12.5 micrometers, smaller than the diameter of a human hair. MAHLI carries both white light sources, similar to the light from a flashlight, and ultraviolet light sources, similar to the light from a tanning lamp, making the imager functional both day and night. The ultraviolet light can be used to induce fluorescence to help detect carbonate and evaporite minerals, both of which indicate that water helped shape the landscape on Mars.",
+							"img":"https://mars.nasa.gov/internal_resources/659"
+					},
+					"cam3":{
+							"name":"Mars Descent Imager (MARDI)",
+							"text":".Knowing the location of loose debris, boulders, cliffs, and other features of the terrain is vital for planning the path of exploration now that the Mars Science Laboratory rover has landed on the red planet. The Mars Descent Imager took color video during the rover's descent toward the surface, providing an astronaut's view of the local environment...",
+							"img":"https://mars.nasa.gov/system/content_pages/main_images/407_20100719_MARDI-MSL-camera.jpg"
+					},
+					"cam4":{
+							"name":"APXS",
+							"text":"The Alpha Particle X-Ray Spectrometer will measure the abundance of chemical elements in rocks and soils. Funded by the Canadian Space Agency, the APXS will be placed in contact with rock and soil samples on Mars and will expose the material to alpha particles and X-rays emitted during the radioactive decay of the element curium. X-rays are a type of electromagnetic radiation, like light and microwaves.",
+							"img":"https://mars.nasa.gov/internal_resources/664"
+					}
+				}
+			}
+		}	
+
+	}]
+}

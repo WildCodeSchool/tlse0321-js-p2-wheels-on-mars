@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard({ name, image, txt }) {
   const classes = useStyles();
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
@@ -45,21 +45,18 @@ export default function ImgMediaCard() {
     <Card className={isMatch ? classes.cardResponsive : classes.card}>
       <CardMedia
         component="img"
-        alt="Mastcam-Z"
+        alt={name}
         height="100%"
-        image="https://mars.nasa.gov/layout/mars2020/images/mastcam-500x300.jpg"
-        title="Mastcam-Z"
+        image={image}
+        title={name}
       />
       <CardActionArea className={classes.cardContent}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Mastcam-Z
+            {name}
           </Typography>
           <Typography variant="body2" component="p">
-            An advanced camera system with panoramic and stereoscopic imaging
-            capability with the ability to zoom. The instrument also will
-            determine mineralogy of the Martian surface and assist with rover
-            operations.
+            {txt}
           </Typography>
         </CardContent>
         <CardActions className={classes.cardButton}>

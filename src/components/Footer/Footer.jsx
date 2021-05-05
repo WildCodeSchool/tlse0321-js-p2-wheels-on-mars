@@ -152,12 +152,12 @@ const Footer = () => {
 
                 <ListItem
                   component={Link}
-                  to="/"
+                  to="/aboutus"
                   button
                   className={classes.listItem}
                   style={{ marginBottom: isMatch ? 0 : 30 }}
                 >
-                  <ListItemText>The Team</ListItemText>
+                  <ListItemText>About Us</ListItemText>
                 </ListItem>
               </List>
             </Box>

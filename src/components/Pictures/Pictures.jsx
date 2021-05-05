@@ -1,10 +1,17 @@
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Dialog from '@material-ui/core/Dialog';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import Toolbar from '@material-ui/core/Toolbar';
+// import AppBar from '@material-ui/core/AppBar';
+
 import './picture.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
+  barTool: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+  },
 }));
 
 // This components get all pictures, filter and send the result in the "PictureCard" component.
@@ -44,6 +55,15 @@ const Pictures = ({ name }) => {
   const themeUse = useTheme();
   const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
   const classes = useStyles();
+  const [selectedTile, setSelectedTile] = useState(null);
+
+  const handleClickOpen = (tile) => {
+    setSelectedTile(tile);
+  };
+
+  const handleClose = () => {
+    setSelectedTile(null);
+  };
 
   useEffect(() => {
     axios
@@ -113,11 +133,37 @@ const Pictures = ({ name }) => {
                       Earth Date: {rover.earth_date}
                     </span>
                   )}
+                  actionIcon={(
+                    <IconButton
+                      aria-label={`info about ${rover.title}`}
+                      className={classes.icon}
+                      style={{ color: '#D3D3D3' }}
+                      value={rover.id}
+                      onClick={() => handleClickOpen(rover)}
+                    >
+                      <FullscreenIcon />
+                    </IconButton>
+                  )}
                 />
               </GridListTile>
             ))}
         </GridList>
       </div>
+      <Dialog open={selectedTile !== null} onClose={handleClose}>
+        <Toolbar className={classes.barTool}>
+          <IconButton
+            edge="end"
+            onClick={handleClose}
+            style={{ color: '#000000' }}
+            aria-label="close"
+          >
+            <CloseIcon />
+          </IconButton>
+        </Toolbar>
+        {selectedTile && (
+          <img src={selectedTile.img_src} alt={selectedTile.title} />
+        )}
+      </Dialog>
     </div>
   );
 };

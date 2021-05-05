@@ -10,8 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import Toolbar from '@material-ui/core/Toolbar';
-// import AppBar from '@material-ui/core/AppBar';
-
 import './picture.css';
 
 const useStyles = makeStyles((theme) => ({

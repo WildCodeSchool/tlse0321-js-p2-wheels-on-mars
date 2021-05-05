@@ -8,10 +8,12 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
+import data from '../../../dto.json';
 
+const infos = data.rovers[0];
 const bullInfo = [
   {
-    title: 'Geology Goal:',
+    title: infos.curiosity.science.goals.goal1,
     text:
       'The rovers are designed to study the rock record to reveal more about the geologic processes that created and modified the Martian crust and surface through time. Each layer of rock on the Martian surface contains a record of the environment in which it was formed. The rover seeks evidence of rocks that formed in water and that preserve evidence of organics, the chemical building blocks of life.',
   },
@@ -75,7 +77,7 @@ const ScienceArticle = () => {
           Mars.
         </Typography>
         <img
-          src="https://mars.nasa.gov/imgs/mars2020/science-overview-rover.jpg"
+          src={infos.curiosity.science.img}
           alt="rover"
           className={classes.img}
         />

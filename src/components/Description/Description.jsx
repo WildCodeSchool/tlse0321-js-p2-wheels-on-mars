@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Descriptions = () => {
+const Descriptions = (name) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
 
@@ -48,9 +48,15 @@ const Descriptions = () => {
           />
         </Tabs>
         <Switch>
-          <Route exact path={match.path} component={Missions} />
-          <Route path={`${match.path}/science`} component={Science} />
-          <Route path={`${match.path}/instruments`} component={Instruments} />
+          <Route exact path={match.path}>
+            <Missions {...name} />
+          </Route>
+          <Route path={`${match.path}/science`}>
+            <Science {...name} />
+          </Route>
+          <Route path={`${match.path}/instruments`}>
+            <Instruments {...name} />
+          </Route>
         </Switch>
       </Router>
     </>

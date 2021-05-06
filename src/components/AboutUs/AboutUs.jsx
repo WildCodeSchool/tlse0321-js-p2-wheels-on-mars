@@ -13,7 +13,7 @@ const AboutUs = () => (
           <img src={ilyas} alt="ilyas" />
         </div>
         <h3>Ilyas Hara</h3>
-        <p className="role">WCS Developer</p>
+        <p className="role">Junior Developer</p>
         <p>
           Former aeronautical engineer, attracted by web development, Ilyas
           embarked on the world of the Wild to go &apos;Wild&apos; in the field.
@@ -25,11 +25,12 @@ const AboutUs = () => (
           <img src={seb} alt="Team_image" />
         </div>
         <h3>Sébastien François</h3>
-        <p className="role">WCS Developer</p>
+        <p className="role">Junior Developer</p>
         <p>
-          Ancienne Logisticienne aéronautique, Gwénaëlle veut devenir
-          dévellopeuse web car c&apos;est un métier d&apos;avenir, elle a hâte
-          de vous faire découvrir tous ce qu&apos;elle c&apos;est faire.
+          Former Seaman, Sebastien has the taste of adventure and challenge.
+          After some time sailing around, he decided to come back on land and
+          become a wilder. Very communicative, he likes working among a team.
+          All hands on deck!
         </p>
       </div>
       <div className="team_member">
@@ -37,7 +38,7 @@ const AboutUs = () => (
           <img src={david} alt="Team_image" />
         </div>
         <h3>David Bourrel</h3>
-        <p className="role">WCS Developer</p>
+        <p className="role">Junior Developer</p>
         <p>
           Interested by web development since a couple of years, David decided
           to jump into it and join the wilders! To create, develop and help each
@@ -49,7 +50,7 @@ const AboutUs = () => (
           <img src={nico} alt="Team_image" />
         </div>
         <h3>Nicolas Concina</h3>
-        <p className="role">WCS Developer</p>
+        <p className="role">Junior Developer</p>
         <p>
           Ancienne Logisticienne aéronautique, Gwénaëlle veut devenir
           dévellopeuse web car c&apos;est un métier d&apos;avenir, elle a hâte

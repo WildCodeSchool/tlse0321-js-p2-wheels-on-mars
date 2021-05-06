@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: #e7ecef;
   font-family: 'Roboto', sans-serif;
@@ -80,8 +74,8 @@ body {
 }
 
 .team .team_member .team_img img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   padding: 5px;
   border-radius: 50%;
 }

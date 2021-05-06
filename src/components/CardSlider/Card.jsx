@@ -26,13 +26,13 @@ const Card = ({
   };
   const ImgCardHeader = {
     width: '100%',
-    height: '40%',
+    height: '30%',
     background: `url(${img})center`,
     backgroundSize: 'cover',
     margin: '0 0 ',
   };
   const CardTitle = {
-    fontSize: '2rem',
+    fontSize: '1.5rem',
     fontFamily: 'Rajdhani',
     fontWeight: '500',
     color: '#2e2c2c',
@@ -44,7 +44,8 @@ const Card = ({
     flexDirection: 'row',
   };
   const CardText = {
-    fontSize: '0.9rem',
+    flexGrow: '1',
+    fontSize: '0.8rem',
     fontFamily: 'Rajdhani',
     fontWeight: 200,
     color: '#2e2c2c',
@@ -52,7 +53,7 @@ const Card = ({
     padding: '0.5rem 1rem',
   };
   const CardStatus = {
-    fontSize: '1rem',
+    fontSize: '0.9rem',
     fontFamily: 'Rajdhani',
     fontWeight: 300,
     color: '#2e2c2c',

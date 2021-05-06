@@ -16,18 +16,23 @@ import {
 import DrawerMenu from './components/Drawermenu/DrawerMenu';
 
 const Navigation = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(null);
 
   const handleClickTab = (e, newValue) => {
     setValue(newValue);
   };
+
+  const returnHome = () => {
+    setValue(null);
+  };
+
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
       <AppBar color="#fff" position="sticky" elevation={1}>
         <Toolbar>
-          <Typography component={Link} to="/">
+          <Typography component={Link} to="/" onClick={returnHome}>
             <IconContext.Provider
               value={{
                 size: '4rem',

@@ -79,7 +79,7 @@ const Pictures = ({ name }) => {
   const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
   const classes = useStyles();
   const searchPictureURL = `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`;
-  
+
   const [selectedTile, setSelectedTile] = useState(null);
 
   const handleClickOpen = (tile) => {

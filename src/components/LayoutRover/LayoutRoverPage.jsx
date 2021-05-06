@@ -22,7 +22,6 @@ const useStyles = makeStyles(() => ({
 
 const LayoutRoverPage = ({ name, iframe }) => {
   const classes = useStyles();
-
   return (
     <div>
       <Grid container>

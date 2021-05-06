@@ -1,10 +1,11 @@
 import LayoutRoverPage from '../../components/LayoutRover/LayoutRoverPage';
+import data from '../../dto.json';
 
-const CURIOSITY_ROVER_3D_URL = require('../../constants/CURIOSITY_ROVER_3D_URL');
+const { curiosity } = data.rovers[0];
 
 const Curiosity = () => (
   <div>
-    <LayoutRoverPage {...CURIOSITY_ROVER_3D_URL} />
+    <LayoutRoverPage {...curiosity} />
   </div>
 );
 

@@ -1,15 +1,12 @@
 import LayoutRoverPage from '../../components/LayoutRover/LayoutRoverPage';
+import data from '../../dto.json';
 
-const Spirit = () => {
-  const rover = {
-    name: 'Spirit',
-    iframe: 'https://mars.nasa.gov/layout/embed/model/?s=3&rotate=true',
-  };
-  return (
-    <div>
-      <LayoutRoverPage {...rover} />
-    </div>
-  );
-};
+const { spirit } = data.rovers[0];
+
+const Spirit = () => (
+  <div>
+    <LayoutRoverPage {...spirit} />
+  </div>
+);
 
 export default Spirit;

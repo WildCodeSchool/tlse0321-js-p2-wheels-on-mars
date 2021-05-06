@@ -9,8 +9,12 @@ const useStyles = makeStyles({
   },
 });
 
-const InstrumentArticle = () => {
+const InstrumentArticle = ({ instruments }) => {
   const classes = useStyles();
+  const camera1 = instruments.cameras.cam1;
+  const camera2 = instruments.cameras.cam2;
+  const camera3 = instruments.cameras.cam3;
+  const camera4 = instruments.cameras.cam4;
   return (
     <Paper elevation={0}>
       <Container>
@@ -23,7 +27,7 @@ const InstrumentArticle = () => {
           conditions, and potential biosignatures.
         </Typography>
         <img
-          src="https://mars.nasa.gov/system/resources/detail_files/25045_Perseverance_Mars_Rover_Instrument_Labels-web.jpg"
+          src={instruments.img}
           alt="rover"
           style={{ height: 'auto', width: '100%' }}
         />
@@ -37,10 +41,26 @@ const InstrumentArticle = () => {
           missions. This chain allows NASA to push the boundaries of what is
           currently possible, while still relying on proven technologies.
         </Typography>
-        <ImageMediaCard />
-        <ImageMediaCard />
-        <ImageMediaCard />
-        <ImageMediaCard />
+        <ImageMediaCard
+          name={camera1.name}
+          image={camera1.img}
+          txt={camera1.text}
+        />
+        <ImageMediaCard
+          name={camera2.name}
+          image={camera2.img}
+          txt={camera2.text}
+        />
+        <ImageMediaCard
+          name={camera3.name}
+          image={camera3.img}
+          txt={camera3.text}
+        />
+        <ImageMediaCard
+          name={camera4.name}
+          image={camera4.img}
+          txt={camera4.text}
+        />
       </Container>
     </Paper>
   );

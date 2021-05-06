@@ -1,10 +1,12 @@
 import { Carousel } from '3d-react-carousal';
+import { useHistory } from 'react-router-dom';
 import Card from './Card';
+import data from '../../dto.json';
 
-const opportunity = require('../../constants/OPPORTUNITY_ROVER_3D_URL');
-const curiosity = require('../../constants/CURIOSITY_ROVER_3D_URL');
-const perseverance = require('../../constants/PERSEVERANCE_ROVER_3D_URL');
-const spirit = require('../../constants/SPIRIT_ROVER_3D_URL');
+const { opportunity } = data.rovers[0];
+const { curiosity } = data.rovers[0];
+const { perseverance } = data.rovers[0];
+const { spirit } = data.rovers[0];
 
 const CardSlider = () => {
   const SliderContainer = {
@@ -13,13 +15,19 @@ const CardSlider = () => {
     backgroundColor: '#13103b93',
   };
 
-  const slides = [
-    <Card {...curiosity} />,
-    <Card {...opportunity} />,
-    <Card {...perseverance} />,
-    <Card {...spirit} />,
-  ];
+  const history = useHistory();
 
+  const routeCuriosity = () => history.push('/curiosity');
+  const routeOpportunity = () => history.push('/opportunity');
+  const routePerseverance = () => history.push('/perseverance');
+  const routeSpirit = () => history.push('/spirit');
+
+  const slides = [
+    <Card {...curiosity} route={routeCuriosity} />,
+    <Card {...opportunity} route={routeOpportunity} />,
+    <Card {...perseverance} route={routePerseverance} />,
+    <Card {...spirit} route={routeSpirit} />,
+  ];
   return (
     <>
       <header style={{ textAlign: 'center' }}>

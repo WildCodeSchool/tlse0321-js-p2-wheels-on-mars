@@ -206,7 +206,7 @@ const Footer = () => {
             </Box>
           </Toolbar>
           <Box className={classes.footerCopyright}>
-            <Typography>Â©2021 Nasa Wilders</Typography>
+            <Typography>©2021 Nasa Wilders</Typography>
           </Box>
         </Box>
       </AppBar>

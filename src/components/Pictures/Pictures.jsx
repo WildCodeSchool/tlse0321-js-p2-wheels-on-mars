@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -42,6 +43,29 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row-reverse',
   },
+  submitButton: {
+    backgroundColor: '#13103B',
+    borderRadius: '10px',
+    border: '1px solid #13103B',
+    color: '#FFF',
+    cursor: 'pointer',
+    display: 'inline',
+    fontWeight: '600',
+    padding: '0.5rem 1rem',
+    pointerEvents: 'auto',
+    marginLeft: '1rem',
+  },
+  cursorIsWaiting: {
+    backgroundColor: '#302f42',
+    borderRadius: '10px',
+    border: '1px solid #302f42',
+    color: '#FFF',
+    display: 'inline',
+    fontWeight: '600',
+    padding: '0.5rem 1rem',
+    marginLeft: '1rem',
+    pointerEvents: 'none',
+  },
 }));
 
 // This components get all pictures, filter and send the result in the "PictureCard" component.
@@ -50,9 +74,12 @@ const Pictures = ({ name }) => {
   const [limitedPicture, setLimitedPicture] = useState([]);
   const [rangeValue, setRangeValue] = useState(5);
   const [solInputValue, setSolInputValue] = useState(55);
+  const [enableClick, setEnableClick] = useState(true);
   const themeUse = useTheme();
   const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
   const classes = useStyles();
+  const searchPictureURL = `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`;
+
   const [selectedTile, setSelectedTile] = useState(null);
 
   const handleClickOpen = (tile) => {
@@ -63,27 +90,51 @@ const Pictures = ({ name }) => {
     setSelectedTile(null);
   };
 
-  useEffect(() => {
+  const handleRangeChange = (e) => {
+    setRangeValue(e.target.value);
+  };
+
+  const handleSolChange = (e) => {
+    setSolInputValue(parseInt(e.target.value, 10));
+  };
+
+  // Add delay on the submit button to avoid spam API request
+  const handleToggleClick = () => {
+    setEnableClick(false);
+    setTimeout(() => {
+      setEnableClick(true);
+    }, 2000);
+  };
+
+  const fetchDataPictue = () => {
     axios
-      .get(
-        `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`,
-      )
+      .get(searchPictureURL)
       .then((res) => res.data)
       .then((data) => {
         setTotalPicture(data.photos);
       });
+
     const limitPicture = () => {
       totalPicture.length = rangeValue;
       setLimitedPicture(totalPicture);
     };
     limitPicture();
-  }, [totalPicture, rangeValue]);
+  };
+
+  useEffect(() => {
+    fetchDataPictue();
+  }, [solInputValue]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchDataPictue();
+  };
 
   return (
     <div className={classes.pictures}>
       <h2>Rover pictures</h2>
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="limitPicture" className="limitPictureLabel">
             <span>Max pictures {rangeValue} :</span>
             <input
@@ -94,7 +145,7 @@ const Pictures = ({ name }) => {
               step="1"
               value={rangeValue}
               text-value={rangeValue}
-              onChange={(e) => setRangeValue(e.target.value)}
+              onChange={handleRangeChange}
             />
           </label>
           <label htmlFor="solNumber" className="solNumber">
@@ -102,9 +153,17 @@ const Pictures = ({ name }) => {
             <input
               type="number"
               value={solInputValue}
-              onChange={(e) => setSolInputValue(e.target.value)}
+              onChange={handleSolChange}
             />
           </label>
+          <input
+            type="submit"
+            value="Search"
+            onClick={handleToggleClick}
+            className={
+              enableClick ? classes.submitButton : classes.cursorIsWaiting
+            }
+          />
         </form>
       </div>
       <div className={classes.container}>
@@ -116,7 +175,7 @@ const Pictures = ({ name }) => {
           style={{ width: `${isMatch ? '60%' : '80%'}`, height: 'auto' }}
         >
           {limitedPicture
-            .filter((rover) => rover.sol <= solInputValue)
+            .filter((rover) => rover.sol === solInputValue)
             .map((rover) => (
               <GridListTile key={rover.img}>
                 <img src={rover.img_src} alt={rover.rover.name} />

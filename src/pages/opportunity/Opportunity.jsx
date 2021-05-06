@@ -1,10 +1,11 @@
 import LayoutRoverPage from '../../components/LayoutRover/LayoutRoverPage';
+import data from '../../dto.json';
 
-const OPPORTUNITY_ROVER_3D_URL = require('../../constants/OPPORTUNITY_ROVER_3D_URL');
+const { opportunity } = data.rovers[0];
 
 const Opportunity = () => (
   <div>
-    <LayoutRoverPage {...OPPORTUNITY_ROVER_3D_URL} />
+    <LayoutRoverPage {...opportunity} />
   </div>
 );
 export default Opportunity;

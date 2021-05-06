@@ -70,7 +70,7 @@ const AboutUs = () => (
         <p className="role">Junior Developer</p>
         <p className="description">
           Former boilermaker technician converted to web developer at
-          WildCodeschool ! Send money please to be able to buy cheese, I eat
+          WildCodeSchool ! Send money please to be able to buy cheese, I eat
           pasta every day!
         </p>
         <div className="linkedin">

@@ -1,11 +1,11 @@
 import ScienceArticle from './ScienceArticle';
 
-const Science = () => (
+const Science = ({ science }) => (
   <>
     <header style={{ textAlign: 'center' }}>
       <h1>Science</h1>
     </header>
-    <ScienceArticle />
+    <ScienceArticle science={science} />
   </>
 );
 export default Science;

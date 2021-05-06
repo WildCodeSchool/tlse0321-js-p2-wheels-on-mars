@@ -87,7 +87,7 @@ const Card = ({
       </div>
       <p style={CardText}>{text}</p>
       <button type="button" style={CardButton} onClick={route}>
-        Read more ...
+        See photos ...
       </button>
     </div>
   );

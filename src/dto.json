@@ -3,22 +3,24 @@
     {
       "traverseMap": [
         {
-          "curiosity": {
-            "title": "Curiosity Traverse Map",
-            "image": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23412.jpg"
-          },
-          "opportunity": {
-            "title": "Opportunity Traverse Map",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Opportunity_rover_lifetime_progress_map.jpg/400px-Opportunity_rover_lifetime_progress_map.jpg"
-          },
-          "perseverance": {
-            "title": "https://i.postimg.cc/hv5gfk3R/good45798-PIA24486-Drive-Map.png",
-            "image": "Perseverance Traverse Map"
-          },
-          "spirit": {
-            "title": "Total rovers on Mars",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA24320-MarsLandingSites-20201216.jpg/600px-PIA24320-MarsLandingSites-20201216.jpg"
-          }
+          "text": "Curiosity Traverse Map",
+          "image": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23412.jpg"
+        },
+        {
+          "text": "Opportunity Traverse Map",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Opportunity_rover_lifetime_progress_map.jpg/400px-Opportunity_rover_lifetime_progress_map.jpg"
+        },
+        {
+          "text": "Perseverance Traverse Map",
+          "image": "https://i.postimg.cc/hv5gfk3R/good45798-PIA24486-Drive-Map.png"
+        },
+        {
+          "text": "Spirit Traverse Map",
+          "image": "https://i.postimg.cc/mZ3k2kwT/Spirit-Traverse-Map.jpg"
+        },
+        {
+          "text": "Total rovers on Mars",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA24320-MarsLandingSites-20201216.jpg/600px-PIA24320-MarsLandingSites-20201216.jpg"
         }
       ],
       "curiosity": {

@@ -71,6 +71,7 @@ const Card = ({
     fontWeight: 400,
     backgroundColor: '#fff',
     color: '#2e2c2c',
+    cursor: 'pointer',
   };
 
   return (

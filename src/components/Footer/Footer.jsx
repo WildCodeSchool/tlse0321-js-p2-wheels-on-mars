@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import SendIcon from '@material-ui/icons/Send';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -14,10 +10,9 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import logoInstagram from '../../assets/logos/logo-instagram1.png';
-import logoFacebook from '../../assets/logos/logo-facebook1.png';
-import logoTwitter from '../../assets/logos/logo-twiter1.png';
-import logoLinkedin from '../../assets/logos/logo-linkedin.png';
+import logoGithub from '../../assets/logos/GitHub-Logo.png';
+import logoWild from '../../assets/logos/logo-wild.png';
+import logoNasa from '../../assets/logos/NASA_logo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,16 +45,19 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     whiteSpace: 'nowrap',
   },
-  box: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    textAlign: 'center',
-    flexWrap: 'wrap',
+  listStyle: {
     listStyle: 'none',
+    textAlign: 'center',
+  },
+  flexCenter: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   contact: {
     padding: 30,
+    textAlign: 'center',
   },
   lastSection: {
     alignItems: 'start',
@@ -171,61 +169,44 @@ const Footer = () => {
             <Box className={classes.secondCol}>
               <Box className={classes.contact}>
                 <Typography variant="subtitle1" gutterBottom>
-                  Contact Nasa:
-                </Typography>
-                <Paper component="form" className={classes.root}>
-                  <InputBase
-                    className={classes.input}
-                    placeholder="@"
-                    inputProps={{ 'aria-label': 'send' }}
-                  />
-                  <IconButton
-                    type="submit"
-                    className={classes.iconButton}
-                    aria-label="send"
+                  Careers at NASA !
+                  <a
+                    href="https://www.nasa.gov/careers"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.flexCenter}
                   >
-                    <SendIcon />
-                  </IconButton>
-                </Paper>
-                <Typography variant="subtitle1" gutterBottom>
-                  Follow us:
+                    <Avatar alt="wild code school" src={logoNasa} />
+                  </a>
                 </Typography>
-                <Box className={classes.box}>
-                  <li>
-                    <a href="https://www.instagram.com">
-                      <Avatar alt="instagram" src={logoInstagram} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <Avatar alt="twitter" src={logoTwitter} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <Avatar alt="facebook" src={logoFacebook} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <Avatar alt="linkedin" src={logoLinkedin} />
-                    </a>
-                  </li>
-                </Box>
+
+                <Typography variant="subtitle1" gutterBottom>
+                  Our school :
+                  <a
+                    href="https://www.wildcodeschool.com/fr-FR"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.flexCenter}
+                  >
+                    <Avatar alt="wild code school" src={logoWild} />
+                  </a>
+                </Typography>
+                <Typography variant="subtitle1" gutterBottom>
+                  Fork Me ! :
+                  <a
+                    href="https://github.com/WildCodeSchool/tlse0321-js-p2-wheels-on-mars"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.flexCenter}
+                  >
+                    <Avatar alt="github" src={logoGithub} />
+                  </a>
+                </Typography>
               </Box>
             </Box>
           </Toolbar>
           <Box className={classes.footerCopyright}>
-            <Typography>
-              <Link
-                to="/"
-                variant="body2"
-                color="inherit"
-                style={{ textDecoration: 'none', color: 'white' }}
-              >
-                ©2010-2020 Privacy-Terms
-              </Link>
-            </Typography>
+            <Typography>Â©2021 Nasa Wilders</Typography>
           </Box>
         </Box>
       </AppBar>

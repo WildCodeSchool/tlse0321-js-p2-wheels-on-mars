@@ -34,6 +34,9 @@ body {
 }
 
 .team .team_member {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
   background: #13103b;
   margin: 5px;
   margin-bottom: 50px;
@@ -43,12 +46,18 @@ body {
   color: #c0c0c0;
   position: relative;
   border-radius: 15px 50px 30px;
+  align-content: space-between;
 }
 
 .team .team_member h3 {
   color: #c0c0c0;
   font-size: 26px;
   margin-top: 50px;
+  text-align: center;
+}
+
+.team .team_member p.description {
+  flex-grow: 1;
 }
 
 .team .team_member p.role {
@@ -56,6 +65,7 @@ body {
   margin: 12px 0;
   font-size: 15px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .team .team_member .team_img {
@@ -73,5 +83,18 @@ body {
   width: 100px;
   height: 100px;
   padding: 5px;
+  border-radius: 50%;
+}
+
+.team .team_member .follow {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 1.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.team .team_member .linkedin img {
+  margin-top: 1rem;
   border-radius: 50%;
 }

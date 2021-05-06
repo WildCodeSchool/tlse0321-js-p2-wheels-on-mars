@@ -1,7 +1,9 @@
+// import { Avatar } from '@material-ui/core';
 import ilyas from '../../assets/portraits/ilyas.jpg';
 import seb from '../../assets/portraits/seb.jpg';
 import david from '../../assets/portraits/david.jpg';
 import nico from '../../assets/portraits/nico.jpg';
+import logoLinkedin from '../../assets/logos/logo-linkedin.png';
 import './aboutUs.css';
 
 const AboutUs = () => (
@@ -19,6 +21,11 @@ const AboutUs = () => (
           embarked on the world of the Wild to go &apos;Wild&apos; in the field.
           Ready to challenge anything, he is unstoppable.
         </p>
+        <div className="linkedin">
+          <a href="https://www.linkedin.com/in/ilyas-hara/">
+            <img src={logoLinkedin} alt="linkedin" />
+          </a>
+        </div>
       </div>
       <div className="team_member">
         <div className="team_img">
@@ -32,6 +39,11 @@ const AboutUs = () => (
           become a wilder. Very communicative, he likes working among a team.
           All hands on deck!
         </p>
+        <div className="linkedin">
+          <a href="https://www.linkedin.com/in/sebastienfrancois-web/">
+            <img src={logoLinkedin} alt="linkedin" />
+          </a>
+        </div>
       </div>
       <div className="team_member">
         <div className="team_img">
@@ -39,11 +51,16 @@ const AboutUs = () => (
         </div>
         <h3>David Bourrel</h3>
         <p className="role">Junior Developer</p>
-        <p>
+        <p className="description">
           Interested by web development since a couple of years, David decided
           to jump into it and join the wilders! To create, develop and help each
           other are his motivations !
         </p>
+        <div className="linkedin">
+          <a href="https://www.linkedin.com/in/david-bourrel/">
+            <img src={logoLinkedin} alt="linkedin" />
+          </a>
+        </div>
       </div>
       <div className="team_member">
         <div className="team_img">
@@ -51,11 +68,16 @@ const AboutUs = () => (
         </div>
         <h3>Nicolas Concina</h3>
         <p className="role">Junior Developer</p>
-        <p>
-          Ancienne Logisticienne aéronautique, Gwénaëlle veut devenir
-          dévellopeuse web car c&apos;est un métier d&apos;avenir, elle a hâte
-          de vous faire découvrir tous ce qu&apos;elle c&apos;est faire.
+        <p className="description">
+          Former boilermaker technician converted to web developer at
+          WildCodeschool ! Send money please to be able to buy cheese, I eat
+          pasta every day!
         </p>
+        <div className="linkedin">
+          <a href="https://www.linkedin.com">
+            <img src={logoLinkedin} alt="linkedin" />
+          </a>
+        </div>
       </div>
     </div>
   </div>

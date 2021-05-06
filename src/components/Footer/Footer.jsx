@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -28,11 +27,6 @@ const useStyles = makeStyles((theme) => ({
   },
   iconButton: {
     padding: 10,
-  },
-  divider: {
-    height: 'auto',
-    margin: 4,
-    background: 'black',
   },
   fullList: {
     width: '10rem',
@@ -94,13 +88,6 @@ const Footer = () => {
             className={classes.toolBar}
             style={{ flexDirection: `${isMatch ? 'column' : 'row'}` }}
           >
-            <Box>
-              <Divider
-                className={classes.divider}
-                position="inherit"
-                orientation="vertical"
-              />
-            </Box>
             <Box className="secondCol">
               <List className={classes.fullList}>
                 <ListItem
@@ -158,13 +145,6 @@ const Footer = () => {
                   <ListItemText>About Us</ListItemText>
                 </ListItem>
               </List>
-            </Box>
-            <Box>
-              <Divider
-                className={classes.divider}
-                position="inherit"
-                orientation="vertical"
-              />
             </Box>
             <Box className={classes.secondCol}>
               <Box className={classes.contact}>

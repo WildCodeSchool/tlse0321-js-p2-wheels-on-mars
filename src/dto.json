@@ -125,7 +125,7 @@
           "cameras": {
             "cam1": {
               "name": "Pancam",
-              "text": "The Panoramic Camera is known by its nickname, Pancam. Two cameras work in combination to take detailed, multi-wavelength, 3-D panoramic pictures of the Martian landscape surrounding the rover. The Pancam Mast Assembly (PMA) allows the cameras to rotate a full 360° to obtain a panoramic view of the martian landscape. The camera bar itself can swing up or down through 180° of elevation. Scientists use Pancam to scan the horizon of Mars for landforms that may indicate a past history of water. They also use the instrument to create a map of the area where the rover lands, as well as search for interesting rocks and soils to study.",
+              "text": "The Panoramic Camera is known by its nickname, Pancam. Two cameras work in combination to take detailed, multi-wavelength, 3-D panoramic pictures of the Martian landscape surrounding the rover. The Pancam Mast Assembly (PMA) allows the cameras to rotate a full 360° to obtain a panoramic view of the martian landscape. The camera bar itself can swing up or down through 180° of elevation.",
               "img": "https://mars.nasa.gov/imgs/mer/instruments/pancam1_400.jpg"
             },
             "cam2": {
@@ -190,7 +190,7 @@
               "img": "https://mars.nasa.gov/layout/mars2020/images/mastcam-web.jpg"
             },
             "cam2": {
-              "name": "MEDA(Mars Environmental Dynamics Analyzer)",
+              "name": "MEDA",
               "text": "The Mars Environmental Dynamics Analyzer is known as MEDA. It makes weather measurements including wind speed and direction, temperature and humidity, and also measures the amount and size of dust particles in the Martian atmosphere.",
               "img": "https://mars.nasa.gov/layout/mars2020/images/meda-web.jpg"
             },
@@ -201,7 +201,7 @@
             },
             "cam4": {
               "name": "SHERLOC",
-              "text": "The Scanning Habitable Environments with Raman & Luminescence for Organics & Chemicals has a nickname: SHERLOC. Mounted on the rover's robotic arm, SHERLOC uses cameras, spectrometers, and a laser to search for organics and minerals that have been altered by watery environments and may be signs of past microbial life. In addition to its black-and-white context camera, SHERLOC is assisted by WATSON, a color camera for taking close-up images of rock grains and surface textures.",
+              "text": "The Scanning Habitable Environments with Raman & Luminescence for Organics & Chemicals has a nickname: SHERLOC. Mounted on the rover's robotic arm, SHERLOC uses cameras, spectrometers, and a laser to search for organics and minerals that have been altered by watery environments and may be signs of past microbial life.",
               "img": "https://mars.nasa.gov/layout/mars2020/images/sherloc-web.jpg"
             }
           }
@@ -247,7 +247,7 @@
           "cameras": {
             "cam1": {
               "name": "Pancam",
-              "text": "The Panoramic Camera is known by its nickname, Pancam. Two cameras work in combination to take detailed, multi-wavelength, 3-D panoramic pictures of the Martian landscape surrounding the rover. The Pancam Mast Assembly (PMA) allows the cameras to rotate a full 360° to obtain a panoramic view of the martian landscape. The camera bar itself can swing up or down through 180° of elevation. Scientists use Pancam to scan the horizon of Mars for landforms that may indicate a past history of water. They also use the instrument to create a map of the area where the rover lands, as well as search for interesting rocks and soils to study.",
+              "text": "The Panoramic Camera is known by its nickname, Pancam. Two cameras work in combination to take detailed, multi-wavelength, 3-D panoramic pictures of the Martian landscape surrounding the rover. The Pancam Mast Assembly (PMA) allows the cameras to rotate a full 360° to obtain a panoramic view of the martian landscape. The camera bar itself can swing up or down through 180° of elevation.",
               "img": "https://mars.nasa.gov/imgs/mer/instruments/pancam1_400.jpg"
             },
             "cam2": {

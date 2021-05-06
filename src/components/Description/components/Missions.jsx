@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Missions = () => {
+const Missions = ({ mission }) => {
   const classes = useStyles();
   return (
     <>
@@ -83,25 +83,25 @@ const Missions = () => {
                     <ListItem>
                       <ListItemText
                         primary="Mission Name: "
-                        secondary="Mars 2020"
+                        secondary={mission.facts.missionName}
                       />
                     </ListItem>
                     <ListItem>
                       <ListItemText
                         primary="Main Job: "
-                        secondary="Seek signs of ancient life and collect rock and soil samples"
+                        secondary={mission.facts.mainJob}
                       />
                     </ListItem>
                     <ListItem>
                       <ListItemText
                         primary="Landing Site: "
-                        secondary="Jezero Crater, Mars"
+                        secondary={mission.facts.LandingSite}
                       />
                     </ListItem>
                     <ListItem>
                       <ListItemText
                         primary="Mission Duration:"
-                        secondary="At least one Mars year (about 687 Earth days)"
+                        secondary={mission.facts.missionDuration}
                       />
                     </ListItem>
                   </List>
@@ -117,7 +117,7 @@ const Missions = () => {
                 </Typography>
               </CardContent>
             </Card>
-            <Article />
+            <Article mission={mission} />
           </Box>
         </Container>
       </Paper>

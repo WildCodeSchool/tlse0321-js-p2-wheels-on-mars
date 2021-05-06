@@ -1,10 +1,11 @@
 import { Carousel } from '3d-react-carousal';
 import Card from './Card';
+import data from '../../dto.json';
 
-const opportunity = require('../../constants/OPPORTUNITY_ROVER_3D_URL');
-const curiosity = require('../../constants/CURIOSITY_ROVER_3D_URL');
-const perseverance = require('../../constants/PERSEVERANCE_ROVER_3D_URL');
-const spirit = require('../../constants/SPIRIT_ROVER_3D_URL');
+const { opportunity } = data.rovers[0];
+const { curiosity } = data.rovers[0];
+const { perseverance } = data.rovers[0];
+const { spirit } = data.rovers[0];
 
 const CardSlider = () => {
   const SliderContainer = {

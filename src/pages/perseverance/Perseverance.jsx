@@ -1,10 +1,11 @@
 import LayoutRoverPage from '../../components/LayoutRover/LayoutRoverPage';
+import data from '../../dto.json';
 
-const PERSEVERANCE_ROVER_3D_URL = require('../../constants/PERSEVERANCE_ROVER_3D_URL');
+const { perseverance } = data.rovers[0];
 
 const Perseverance = () => (
   <div>
-    <LayoutRoverPage {...PERSEVERANCE_ROVER_3D_URL} />
+    <LayoutRoverPage {...perseverance} />
   </div>
 );
 export default Perseverance;

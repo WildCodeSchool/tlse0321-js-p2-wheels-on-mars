@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import GridList from '@material-ui/core/GridList';
@@ -5,6 +6,11 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Dialog from '@material-ui/core/Dialog';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import Toolbar from '@material-ui/core/Toolbar';
 import './picture.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -29,13 +35,13 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     padding: '1rem',
   },
-  listTile: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   tileBar: {
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  barTool: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
   },
   submitButton: {
     backgroundColor: '#13103B',
@@ -73,6 +79,16 @@ const Pictures = ({ name }) => {
   const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
   const classes = useStyles();
   const searchPictureURL = `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`;
+  
+  const [selectedTile, setSelectedTile] = useState(null);
+
+  const handleClickOpen = (tile) => {
+    setSelectedTile(tile);
+  };
+
+  const handleClose = () => {
+    setSelectedTile(null);
+  };
 
   const handleRangeChange = (e) => {
     setRangeValue(e.target.value);
@@ -161,7 +177,7 @@ const Pictures = ({ name }) => {
           {limitedPicture
             .filter((rover) => rover.sol === solInputValue)
             .map((rover) => (
-              <GridListTile key={rover.img} className={classes.listTile}>
+              <GridListTile key={rover.img}>
                 <img src={rover.img_src} alt={rover.rover.name} />
                 <GridListTileBar
                   title={rover.rover.name}
@@ -174,11 +190,37 @@ const Pictures = ({ name }) => {
                       Earth Date: {rover.earth_date}
                     </span>
                   )}
+                  actionIcon={(
+                    <IconButton
+                      aria-label={`info about ${rover.title}`}
+                      className={classes.icon}
+                      style={{ color: '#D3D3D3' }}
+                      value={rover.id}
+                      onClick={() => handleClickOpen(rover)}
+                    >
+                      <FullscreenIcon />
+                    </IconButton>
+                  )}
                 />
               </GridListTile>
             ))}
         </GridList>
       </div>
+      <Dialog open={selectedTile !== null} onClose={handleClose}>
+        <Toolbar className={classes.barTool}>
+          <IconButton
+            edge="end"
+            onClick={handleClose}
+            style={{ color: '#000000' }}
+            aria-label="close"
+          >
+            <CloseIcon />
+          </IconButton>
+        </Toolbar>
+        {selectedTile && (
+          <img src={selectedTile.img_src} alt={selectedTile.title} />
+        )}
+      </Dialog>
     </div>
   );
 };

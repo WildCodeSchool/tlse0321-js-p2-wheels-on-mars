@@ -1,9 +1,10 @@
 import ImageSlider from './ImageSlider';
+import data from '../../dto.json';
 
-const SliderData = require('../../constants/ROADMAP_DATA');
+const sliderData = data.rovers[0].traverseMap;
 
 function RoadMap() {
-  return <ImageSlider slides={SliderData} />;
+  return <ImageSlider slides={sliderData} />;
 }
 
 export default RoadMap;

@@ -55,7 +55,10 @@ const DrawerMenu = () => {
           </IconContext.Provider>
         </Typography>
 
-        <List className={classes.fullList}>
+        <List
+          className={classes.fullList}
+          onClick={() => setOpenDrawer(!openDrawer)}
+        >
           <ListItem
             component={Link}
             to="/curiosity"

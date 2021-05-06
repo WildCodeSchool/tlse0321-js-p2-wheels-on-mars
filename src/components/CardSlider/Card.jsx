@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Card = ({ name, img, text }) => {
+const Card = ({
+  name, img, text, route,
+}) => {
   const [infosRover, setInfosRover] = useState([]);
 
   useEffect(() => {
@@ -84,17 +86,8 @@ const Card = ({ name, img, text }) => {
         </h2>
       </div>
       <p style={CardText}>{text}</p>
-      <h2 style={CardStatus}>
-        Article :{' '}
-        <a
-          href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow"
-          style={CardButton}
-        >
-          See more about his rover
-        </a>
-      </h2>
-      <button type="button" style={CardButton}>
-        Read more ...
+      <button type="button" style={CardButton} onClick={route}>
+        See photos ...
       </button>
     </div>
   );

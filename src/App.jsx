@@ -1,7 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/home/Home';
-import Sojourner from './pages/sojourner/Sojourner';
 import Spirit from './pages/spirit/Spirit';
 import Opportunity from './pages/opportunity/Opportunity';
 import Curiosity from './pages/curiosity/Curiosity';
@@ -14,7 +13,6 @@ const App = () => (
     <Navigation />
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/sojourner" exact component={Sojourner} />
       <Route path="/spirit" exact component={Spirit} />
       <Route path="/opportunity" exact component={Opportunity} />
       <Route path="/curiosity" exact component={Curiosity} />

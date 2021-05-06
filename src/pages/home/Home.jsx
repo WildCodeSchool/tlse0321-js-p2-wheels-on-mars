@@ -1,5 +1,6 @@
 import Header from '../../components/Header/Header';
 import './home.css';
+import CardSlider from '../../components/CardSlider/CardSlider';
 
 const Home = () => (
   <>
@@ -28,6 +29,7 @@ const Home = () => (
         </p>
       </div>
     </div>
+    <CardSlider />
   </>
 );
 

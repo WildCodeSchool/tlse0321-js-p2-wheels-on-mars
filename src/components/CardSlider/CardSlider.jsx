@@ -1,4 +1,5 @@
 import { Carousel } from '3d-react-carousal';
+import { useHistory } from 'react-router-dom';
 import Card from './Card';
 
 const opportunity = require('../../constants/OPPORTUNITY_ROVER_3D_URL');
@@ -13,13 +14,19 @@ const CardSlider = () => {
     backgroundColor: '#13103b93',
   };
 
-  const slides = [
-    <Card {...curiosity} />,
-    <Card {...opportunity} />,
-    <Card {...perseverance} />,
-    <Card {...spirit} />,
-  ];
+  const history = useHistory();
 
+  const routeCuriosity = () => history.push('/curiosity');
+  const routeOpportunity = () => history.push('/opportunity');
+  const routePerseverance = () => history.push('/perseverance');
+  const routeSpirit = () => history.push('/spirit');
+
+  const slides = [
+    <Card {...curiosity} route={routeCuriosity} />,
+    <Card {...opportunity} route={routeOpportunity} />,
+    <Card {...perseverance} route={routePerseverance} />,
+    <Card {...spirit} route={routeSpirit} />,
+  ];
   return (
     <>
       <header style={{ textAlign: 'center' }}>

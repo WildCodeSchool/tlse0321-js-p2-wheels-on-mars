@@ -15,10 +15,9 @@ const AboutUs = () => (
         <h3>Ilyas Hara</h3>
         <p className="role">WCS Developer</p>
         <p>
-          Ancien ingénieur aéronautique, attiré par le développement web, Ilyas
-          s&apos;est lancé dans le monde de la Wild pour faire du
-          &apos;Wild&apos; dans le domaine. Prêt à tout défier, il est
-          inarrêtable..
+          Former aeronautical engineer, attracted by web development, Ilyas
+          embarked on the world of the Wild to go &apos;Wild&apos; in the field.
+          Ready to challenge anything, he is unstoppable.
         </p>
       </div>
       <div className="team_member">
@@ -40,9 +39,9 @@ const AboutUs = () => (
         <h3>David Bourrel</h3>
         <p className="role">WCS Developer</p>
         <p>
-          Ancienne Logisticienne aéronautique, Gwénaëlle veut devenir
-          dévellopeuse web car c&apos;est un métier d&apos;avenir, elle a hâte
-          de vous faire découvrir tous ce qu&apos;elle c&apos;est faire.
+          Interested by web development since a couple of years, David decided
+          to jump into it and join the wilders! To create, develop and help each
+          other are his motivations !
         </p>
       </div>
       <div className="team_member">

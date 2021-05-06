@@ -8,7 +8,7 @@
 
 body {
   background: #e7ecef;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -18,10 +18,11 @@ body {
 }
 
 .wrapper h1 {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 52px;
   margin-bottom: 60px;
   text-align: center;
+  margin-bottom: 6rem;
 }
 
 .team {
@@ -33,25 +34,25 @@ body {
 }
 
 .team .team_member {
-  background: #b9e0f7;
+  background: #13103b;
   margin: 5px;
   margin-bottom: 50px;
   width: 300px;
   padding: 20px;
   line-height: 20px;
-  color: #000000;
+  color: #c0c0c0;
   position: relative;
   border-radius: 15px 50px 30px;
 }
 
 .team .team_member h3 {
-  color: #ff7f50;
+  color: #c0c0c0;
   font-size: 26px;
   margin-top: 50px;
 }
 
 .team .team_member p.role {
-  color: #000000;
+  color: #c0c0c0;
   margin: 12px 0;
   font-size: 15px;
   text-transform: uppercase;

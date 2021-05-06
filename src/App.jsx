@@ -7,6 +7,7 @@ import Curiosity from './pages/curiosity/Curiosity';
 import Perseverance from './pages/perseverance/Perseverance';
 import NotFound from './pages/notFound/NotFound';
 import Footer from './components/Footer/Footer';
+import AboutUs from './components/AboutUs/AboutUs';
 
 const App = () => (
   <>
@@ -17,6 +18,7 @@ const App = () => (
       <Route path="/opportunity" exact component={Opportunity} />
       <Route path="/curiosity" exact component={Curiosity} />
       <Route path="/perseverance" exact component={Perseverance} />
+      <Route path="/aboutus" exact component={AboutUs} />
       <Route component={NotFound} />
     </Switch>
     <Footer />

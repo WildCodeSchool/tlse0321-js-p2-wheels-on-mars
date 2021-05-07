@@ -77,7 +77,7 @@ const Pictures = ({ name }) => {
   const themeUse = useTheme();
   const isMatch = useMediaQuery(themeUse.breakpoints.down('sm'));
   const classes = useStyles();
-  const searchPictureURL = `http://mars-photos.herokuapp.com/api/v1/rovers/${name}/photos?sol=${solInputValue}`;
+  const searchPictureURL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?api_key=6SQbBBh5nKhOO3Dq0gORo0cdLBTHCeJUCfNVns9s&sol=${solInputValue}`;
 
   const [selectedTile, setSelectedTile] = useState(null);
 

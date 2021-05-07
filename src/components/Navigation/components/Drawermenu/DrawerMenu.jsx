@@ -32,7 +32,11 @@ const useStyles = makeStyles({
 const DrawerMenu = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [selected, setSelected] = useState(null);
 
+  const handleClickSelect = (e, newValue) => {
+    setSelected(newValue);
+  };
   return (
     <>
       <Drawer
@@ -55,13 +59,18 @@ const DrawerMenu = () => {
           </IconContext.Provider>
         </Typography>
 
-        <List className={classes.fullList}>
+        <List
+          className={classes.fullList}
+          onClick={() => setOpenDrawer(!openDrawer)}
+        >
           <ListItem
             component={Link}
             to="/curiosity"
             divider
             button
             className={classes.listItem}
+            selected={selected === 0}
+            onClick={(e) => handleClickSelect(e, 0)}
           >
             <ListItemIcon>
               <ListItemText>Curiosity</ListItemText>
@@ -74,6 +83,8 @@ const DrawerMenu = () => {
             divider
             button
             className={classes.listItem}
+            selected={selected === 1}
+            onClick={(e) => handleClickSelect(e, 1)}
           >
             <ListItemIcon>
               <ListItemText>Opportunity</ListItemText>
@@ -86,6 +97,8 @@ const DrawerMenu = () => {
             divider
             button
             className={classes.listItem}
+            selected={selected === 2}
+            onClick={(e) => handleClickSelect(e, 2)}
           >
             <ListItemIcon>
               <ListItemText>Perseverance</ListItemText>
@@ -98,6 +111,8 @@ const DrawerMenu = () => {
             divider
             button
             className={classes.listItem}
+            selected={selected === 3}
+            onClick={(e) => handleClickSelect(e, 3)}
           >
             <ListItemIcon>
               <ListItemText>Spirit</ListItemText>

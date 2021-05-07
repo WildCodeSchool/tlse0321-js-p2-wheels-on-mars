@@ -28,7 +28,7 @@ Goals ? Science Instruments ? Technologies on Board ? ...
 
 Each rover's page provide a 3D view and mission manifest from the API.
 
-- Mission always active
+- Mission status 
 - Launch date
 - Landind date
 - Time on mars

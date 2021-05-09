@@ -9,10 +9,12 @@ const HeroBanner = ({ name, iframe }) => {
 
   useEffect(() => {
     axios
-      .get(`https://mars-photos.herokuapp.com/api/v1/manifests/${name}`)
+      .get(
+        `https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/?api_key=6SQbBBh5nKhOO3Dq0gORo0cdLBTHCeJUCfNVns9s`,
+      )
       .then((response) => response.data)
       .then((data) => {
-        setInfosRover(data.photo_manifest);
+        setInfosRover(data.rover);
       });
   }, []);
 

@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
   cardResponsive: {
     height: 'auto',
-    maxWidth: '60%',
+    maxWidth: '80%',
     display: 'flex',
     flexDirection: 'column',
     margin: '2rem auto',

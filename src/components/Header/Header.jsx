@@ -7,7 +7,6 @@ const Header = () => (
         src="https://solarsystem.nasa.gov/gltf_embed/2372"
         className="mars3d"
         title="mars 3d"
-        height="500"
         width="100%"
         scrolling="no"
         frameBorder="0"

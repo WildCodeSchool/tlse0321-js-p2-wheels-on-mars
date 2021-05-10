@@ -1,11 +1,25 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import BoxInformation from './BoxInformation';
 
+const useStyles = makeStyles({
+  iframe: {
+    height: '500px',
+  },
+  iframeResponsive: {
+    height: '400px',
+  },
+});
+
 const HeroBanner = ({ name, iframe }) => {
   const [infosRover, setInfosRover] = useState([]);
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
     axios
@@ -29,7 +43,7 @@ const HeroBanner = ({ name, iframe }) => {
             <iframe
               src={iframe}
               title="rover"
-              height="500"
+              className={isMatch ? classes.iframeResponsive : classes.iframe}
               width="100%"
               scrolling="no"
               frameBorder="0"
